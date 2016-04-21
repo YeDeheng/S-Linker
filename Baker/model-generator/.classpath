@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/concurrentlinkedhashmap-lru-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/lucene-core-3.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-cypher-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-graph-algo-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-graph-matching-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-jmx-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-kernel-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-lucene-index-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-shell-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/neo4j-udc-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/org.apache.servicemix.bundles.jline-0.9.94_1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/scala-library-2.10.0.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/neo4j-community-1.9.1/lib/server-api-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/dom4j-1.6.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ca.uwaterloo.cs.se.inconsistency.core"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/Java Snippet Parser/jedis-2.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/s23subra/workspace/model-generator/dependencies/ca.lsmr.common_20110124.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

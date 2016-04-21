@@ -1,0 +1,3 @@
+matplotlib.style.matplotlib.style.library,http://matplotlib.org/api/style_api.html#matplotlib.style.matplotlib.style.library
+matplotlib.style.matplotlib.style.available,http://matplotlib.org/api/style_api.html#matplotlib.style.matplotlib.style.available
+matplotlib.rcParams,http://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rcParams

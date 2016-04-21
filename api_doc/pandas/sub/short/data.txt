@@ -1,0 +1,5 @@
+test,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.test.html#pandas.test
+get_option,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.get_option.html#pandas.get_option
+set_option,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.set_option.html#pandas.set_option
+reset_option,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.reset_option.html#pandas.reset_option
+describe_option,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.describe_option.html#pandas.describe_option

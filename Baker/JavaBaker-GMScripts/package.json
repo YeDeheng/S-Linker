@@ -1,0 +1,26 @@
+{
+  "name": "JavaBaker-GMScripts",
+  "version": "0.0.0",
+  "description": "Grease Monkey/ Tamper Monkey scripts that automatically augment Baker results to Javadoc, Stack Overflow and Github Gist pages.",
+  "main": "fetchLocation.js",
+  "dependencies": {
+    "request": "~2.39.0",
+    "cheerio": "~0.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siddhukrs/JavaBaker-GMScripts"
+  },
+  "keywords": [
+    "Baker",
+    "Documentation",
+    "Stack",
+    "Overflow"
+  ],
+  "author": "Siddharth Subramanian",
+  "license": "BSD"
+}

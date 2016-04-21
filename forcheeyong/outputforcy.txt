@@ -1,0 +1,13 @@
+i	O
+am	O
+chee	B-API
+yong	I-API
+.	O
+
+i	O
+am	O
+from	O
+malay	B-API
+.	I-API
+
+chee	O

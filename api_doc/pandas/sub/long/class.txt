@@ -1,0 +1,13 @@
+pandas.Series,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html#pandas.Series
+pandas.option_context,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.option_context.html#pandas.option_context
+pandas.core.style.Styler,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.core.style.Styler.html#pandas.core.style.Styler
+pandas.Grouper,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Grouper.html#pandas.Grouper
+pandas.TimedeltaIndex,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.TimedeltaIndex.html#pandas.TimedeltaIndex
+pandas.DatetimeIndex,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DatetimeIndex.html#pandas.DatetimeIndex
+pandas.MultiIndex,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.MultiIndex.html#pandas.MultiIndex
+pandas.CategoricalIndex,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.CategoricalIndex.html#pandas.CategoricalIndex
+pandas.Index,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Index.html#pandas.Index
+pandas.Panel4D,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Panel4D.html#pandas.Panel4D
+pandas.Panel,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Panel.html#pandas.Panel
+pandas.DataFrame,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame
+pandas.Categorical,http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Categorical.html#pandas.Categorical
