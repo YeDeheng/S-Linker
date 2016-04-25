@@ -4,7 +4,7 @@
 // @version      0.8
 // @description  API linking for S-NER project
 // @author       Chee Yong
-// @include http://stackoverflow.com/*
+// @include     http://stackoverflow.com/*
 // @include     stackoverflow.com/*
 // @include     https://stackoverflow.com/*
 // @require     https://raw.githubusercontent.com/padolsey/findAndReplaceDOMText/master/src/findAndReplaceDOMText.js
@@ -60,6 +60,7 @@ function identifyAPI() {
                     var entityJSON = JSON.parse(response.responseText);
                     extractEntity(entityJSON);
                 } catch(e) {
+                    console.log(e);
                     console.log('Something went wrong with entity recognition :-(');
                     return;
                 }
@@ -84,47 +85,64 @@ function extractEntity(entityJSON) {
     var entityIndex = [];
 
     for (var i = entityJSON.length - 1; i >= 0; i--) {
-        if (/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/.test(entityJSON[i])) {
+        if (/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/.test(entityJSON[i][0]) || entityJSON[i][0] == 'in') {
             entityJSON.splice(i, 1);
         }
     }
-
-    // store list of recognized APIs in term context obj
-    entityJSON.forEach(function(e) {
-        entityList[k] = e;
-        k++;
-    });
-    toBackEndData["entityList"] = entityList;
+    console.log(entityJSON);
 
     var numOfEntities = entityJSON.length;
+
     // Inject span element to recognized APIs
     myNodes.forEach(function(e, index) {
         var startIdx = 0;
+        var remainingText = '';
         var temp = 1;
+        var retry = 0;
+        var ori_e = e.textContent;
+        var check_next = 0;
 
-        while (e.textContent.substr(startIdx).indexOf(entityJSON[0]) != -1 && temp) {
+        while (entityJSON[0] && e.textContent.substr(startIdx).indexOf(entityJSON[0][0]) != -1 && temp) {
             temp = 0;
             findAndReplaceDOMText(e, {
-                //find: RegExp('\\b' + entityJSON[0] + '\\b'),
-                find: RegExp(entityJSON[0]),
+                find: RegExp(entityJSON[0][0]),
                 forceContext: function(el) {
                     return el.matches('.api');
                 },
                 replace: function(portion, match) {
-                    var el = document.createElement('span');
-                    el.classList.add('api');
-                    el.setAttribute("id", numOfEntities-entityJSON.length);
-                    el.style.backgroundColor = 'lightgreen';
-                    el.innerHTML = portion.text;
-                    startIdx = match.endIndex;
-                    temp = 1;
-                    return el;
+                    if (startIdx == 0)
+                        startIdx = match.endIndex;
+
+                    check_next = (ori_e.substr(match.endIndex).trim().lastIndexOf(entityJSON[0][1], 0) === 0);
+                    remainingText = ori_e.substr(match.endIndex);
+                    if(check_next || !remainingText || retry > 3) {
+                        var el = document.createElement('span');
+                        el.classList.add('api');
+                        el.setAttribute("id", numOfEntities-entityJSON.length);
+                        el.style.backgroundColor = 'lightgreen';
+                        el.innerHTML = portion.text;
+                        startIdx = match.endIndex;
+                        retry = 0;
+                        temp = 1;
+                        return el;
+                    } else {
+                        retry++;
+                        return match[0];
+                    }
                 },
             });
-            entityIndex.push(index);
-            entityJSON.shift();
+
+            if(check_next || !remainingText) {
+                entityIndex.push(index);
+                entityList[k] = entityJSON[0][0];
+                k++;
+                entityJSON.shift();
+            }
         }
     });
+
+    // store list of recognized APIs in term context obj
+    toBackEndData["entityList"] = entityList;
 
     // store list of APIs' positional index in term context obj
     toBackEndData["entityIndex"] = entityIndex;
@@ -251,6 +269,7 @@ function UpdateTooltip(response) {
             linkJSON = JSON.parse(response.responseText);
             console.log(linkJSON);
         } catch(e) {
+            console.log(e);
             console.log("Something went wrong with entity linking :-(");
             linkError = true;
             return;
