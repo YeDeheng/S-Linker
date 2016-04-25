@@ -1,4 +1,8 @@
 Change logs:
+v0.8:
+-Support entitiy recognition using CRFsuite model
+-remove alerts (change to console.log)
+
 v0.7:
 -implement class filter in entity linking
 -updated UI (e.g. show API name instead of full URL in table, text aligned center etc.)

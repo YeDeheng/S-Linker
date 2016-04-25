@@ -52,5 +52,10 @@ django_back/static/demo.data
 django_back/static/demo.tk
 django_back/static/demo.txt
 django_back/static/result.txt
+django_back/static/demo2.conll
+django_back/static/demo2.data
+django_back/static/final.txt
+django_back/static/label.txt
+django_back/static/data/
 
 *.data

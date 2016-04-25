@@ -93,6 +93,8 @@ def extract_entity(request):
 	with open(os.path.join(settings.STATIC_ROOT, 'demo.txt'), 'w') as demo_file:
 		demo_file.write(full_text)
 
+	# CRF++
+	'''
 	texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo.conll'))
 	featureextractor.main(os.path.join(settings.STATIC_ROOT, 'demo.conll'), os.path.join(settings.STATIC_ROOT, 'demo.data'))
 	p = subprocess.Popen(['crf_test', '-m', os.path.join(settings.STATIC_ROOT, 'CRFmodel0'), os.path.join(settings.STATIC_ROOT, 'demo.data')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -111,7 +113,29 @@ def extract_entity(request):
 			temp = re.sub('\t(.+)', ' ', line).strip()
 			if (re.search('[a-zA-Z]+', temp)):
 				output.append(temp)
-	# print output
+	'''
+
+	# CRFsuite
+	
+	texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo2.conll'))
+
+	extract_feature_cmd = "python " + os.path.join(settings.STATIC_ROOT, 'enner.py') + " bc-ce < " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " > " + os.path.join(settings.STATIC_ROOT, 'demo2.data')
+	subprocess.call(extract_feature_cmd, shell=True)
+
+	crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " -t " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
+	subprocess.call(crfsuite_cmd, shell=True)
+
+	paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
+	subprocess.call(paste_cmd, shell=True)
+
+	output = []
+	with open(os.path.join(settings.STATIC_ROOT, 'final.txt'), 'r') as f:
+		for line in f:
+			m_api = re.match(r'(\S+)\t(\S+)\t(B-API)', line)
+			if m_api:
+				output.append(m_api.group(1))
+	
+
 	return HttpResponse(json.dumps(output))
 
 @csrf_exempt
@@ -130,12 +154,20 @@ def link_entity(request):
 	encode_texts = data["texts"].encode('ascii', errors='xmlcharrefreplace')
 	full_text = encode_texts.translate(None, string.punctuation)
 
-	variations = {'np.':'numpy.', 'mpl.':'matplotlib.', 'pd.':'pandas.', 'fig.':'figure.', 'plt.':'pyplot.', 'bxp.':'boxplot.', 'df.':'dataframe.'}
+	variations = {'np':'numpy', 'mpl':'matplotlib', 'pd':'pandas', 'fig':'figure', 'plt':'pyplot', 'bxp':'boxplot', 'df':'dataframe'}
 	import_variations = {}
+	declare_variations = {}
+	
 	m = re.findall(r'import (\S+) as (\S+)', encode_texts)
 	if (m):
-		import_variations = dict((y+'.', x+'.') for x, y in m)
+		import_variations = dict((y, x) for x, y in m)
+
+	n = re.findall(r'(\w+)\s?=\s?([A-Za-z0-9_\.]+)\(', encode_texts)
+	if (n):
+		declare_variations = dict((x, y) for x, y in n)
+
 	variations.update(import_variations)
+	variations.update(declare_variations)
 
 	href_info = [];
 	result_list = [];
@@ -153,7 +185,7 @@ def link_entity(request):
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(k, v, value)
+				value = re.sub(r'^%s\.' % k, v+'.', value)
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
@@ -202,7 +234,7 @@ def link_entity(request):
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(k, v, value)
+				value = re.sub(r'^%s\.' % k, v+'.', value)
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
