@@ -125,7 +125,7 @@ def extract_entity(request):
 	crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " -t " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
 	subprocess.call(crfsuite_cmd, shell=True)
 
-	paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
+	paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
 	subprocess.call(paste_cmd, shell=True)
 
 	output = []
