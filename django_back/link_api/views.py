@@ -122,7 +122,7 @@ def extract_entity(request):
 	extract_feature_cmd = "python " + os.path.join(settings.STATIC_ROOT, 'enner.py') + " bc-ce < " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " > " + os.path.join(settings.STATIC_ROOT, 'demo2.data')
 	subprocess.call(extract_feature_cmd, shell=True)
 
-	crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " -t " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
+	crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
 	subprocess.call(crfsuite_cmd, shell=True)
 
 	paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
@@ -133,9 +133,12 @@ def extract_entity(request):
 		for line in f:
 			m_api = re.match(r'(\S+)\t(\S+)\t(B-API)', line)
 			if m_api:
-				output.append(m_api.group(1))
-	
-
+				next_word = re.match(r'(\S+)\t(\S+)\t', next(f))
+				if next_word:
+					output.append((m_api.group(1), next_word.group(1)))
+				else:
+					output.append((m_api.group(1), ''))
+	# print output
 	return HttpResponse(json.dumps(output))
 
 @csrf_exempt

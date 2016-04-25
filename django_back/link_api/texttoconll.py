@@ -61,7 +61,7 @@ def text_to_conll(f):
             lines.append([])
 
     lines = [[l[0], l[1]] if l else l for l in lines]
-    return StringIO('\n'.join(('\t'.join(l) for l in lines)))
+    return '\n'.join(('\t'.join(l) for l in lines))
 
 def build_list():
     f = open('./apidoc/all-remove.txt', 'r')
@@ -82,7 +82,10 @@ def main(arg1, arg2):
     f = open(tokenfile, 'r')
     lines = text_to_conll(f)
     with open(arg2, 'wt') as of:
-        of.write(''.join(lines))
+        of.write(''.join(re.sub('\n\n\n', '\n\n', lines)))
+
+    with open(arg2, 'a') as f:
+        f.write('\n')
 
 if __name__ == '__main__':
     main(*sys.argv[1:])
