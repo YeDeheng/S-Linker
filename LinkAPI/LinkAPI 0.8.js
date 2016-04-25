@@ -23,9 +23,11 @@ var toBackEndData = {};
 var myNodes = [];
 var entityList = {};
 var linkError = false;
+var model_mode = 1;
 
 /* Identify API component */
 function identifyAPI() {
+    var toNERData = {};
     var fullText = '';
 
     // extract discussion text, question title and code snippets
@@ -45,12 +47,13 @@ function identifyAPI() {
     */
 
     // auto mode (access NER model)
-    
+    toNERData['fullText'] = fullText;
+    toNERData['mode'] = model_mode;
     GM_xmlhttpRequest({
         method: "POST",
         url: "http://127.0.0.1:8000/extractentity/", //localhost
         // url: "http://128.199.217.19/entity_recognition/", //external server
-        data: fullText,
+        data: JSON.stringify(toNERData),
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
@@ -92,7 +95,7 @@ function extractEntity(entityJSON) {
     console.log(entityJSON);
 
     var numOfEntities = entityJSON.length;
-
+    
     // Inject span element to recognized APIs
     myNodes.forEach(function(e, index) {
         var startIdx = 0;

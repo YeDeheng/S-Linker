@@ -89,55 +89,64 @@ def crawl(links, token_list):
 @csrf_exempt
 def extract_entity(request):
 	print 'Begin Entity Recognition'
-	full_text = request.body
+	body_unicode = request.body.decode('utf-8')
+	data = json.loads(body_unicode)
+	full_text = data['fullText'].encode('ascii', errors='xmlcharrefreplace')
+	mode = int(data['mode'])
 	with open(os.path.join(settings.STATIC_ROOT, 'demo.txt'), 'w') as demo_file:
 		demo_file.write(full_text)
 
-	# CRF++
-	'''
-	texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo.conll'))
-	featureextractor.main(os.path.join(settings.STATIC_ROOT, 'demo.conll'), os.path.join(settings.STATIC_ROOT, 'demo.data'))
-	p = subprocess.Popen(['crf_test', '-m', os.path.join(settings.STATIC_ROOT, 'CRFmodel0'), os.path.join(settings.STATIC_ROOT, 'demo.data')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	out, err = p.communicate()
-	arr = out.splitlines()
-	output = []
-	
-	# write the output to result.txt
-	# with open(os.path.join(settings.STATIC_ROOT, 'result.txt'), 'w') as demo_file:
-	# 	demo_file.write(out)
+	if mode == 0:
+		# CRF++
+		texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo.conll'))
+		featureextractor.main(os.path.join(settings.STATIC_ROOT, 'demo.conll'), os.path.join(settings.STATIC_ROOT, 'demo.data'))
+		p = subprocess.Popen(['crf_test', '-m', os.path.join(settings.STATIC_ROOT, 'CRFmodel0'), os.path.join(settings.STATIC_ROOT, 'demo.data')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		out, err = p.communicate()
+		arr = out.splitlines()
+		output = []
+		
+		# write the output to result.txt
+		with open(os.path.join(settings.STATIC_ROOT, 'result.txt'), 'w') as demo_file:
+			demo_file.write(out)
 
-	for idx, line in enumerate(arr):
-		# if not line.endswith("O") and line:
-		if line.endswith("B-API"):
-			# remove remaining part after a tab (only entity name)
-			temp = re.sub('\t(.+)', ' ', line).strip()
-			if (re.search('[a-zA-Z]+', temp)):
-				output.append(temp)
-	'''
-
-	# CRFsuite
-	
-	texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo2.conll'))
-
-	extract_feature_cmd = "python " + os.path.join(settings.STATIC_ROOT, 'enner.py') + " bc-ce < " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " > " + os.path.join(settings.STATIC_ROOT, 'demo2.data')
-	subprocess.call(extract_feature_cmd, shell=True)
-
-	crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
-	subprocess.call(crfsuite_cmd, shell=True)
-
-	paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
-	subprocess.call(paste_cmd, shell=True)
-
-	output = []
-	with open(os.path.join(settings.STATIC_ROOT, 'final.txt'), 'r') as f:
-		for line in f:
-			m_api = re.match(r'(\S+)\t(\S+)\t(B-API)', line)
+		for idx, line in enumerate(arr):
+			m_api = re.match(r'(\S+)\t(.+)(B-API|I-API)', line)
 			if m_api:
-				next_word = re.match(r'(\S+)\t(\S+)\t', next(f))
+				try:
+					next_word = re.match(r'(\S+)\t(.+)', arr[idx+1])
+				except IndexError:
+					break
 				if next_word:
 					output.append((m_api.group(1), next_word.group(1)))
 				else:
 					output.append((m_api.group(1), ''))
+	else:
+		# CRFsuite
+		texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo2.conll'))
+
+		extract_feature_cmd = "python " + os.path.join(settings.STATIC_ROOT, 'enner.py') + " bc-ce < " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " > " + os.path.join(settings.STATIC_ROOT, 'demo2.data')
+		subprocess.call(extract_feature_cmd, shell=True)
+
+		crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
+		subprocess.call(crfsuite_cmd, shell=True)
+
+		paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
+		subprocess.call(paste_cmd, shell=True)
+
+		output = []
+		with open(os.path.join(settings.STATIC_ROOT, 'final.txt'), 'r') as f:
+			lines = f.readlines()
+			for idx, line in enumerate(lines):
+				m_api = re.match(r'(\S+)\t(\S+)\t(B-API)', line)
+				if m_api:
+					try:
+						next_word = re.match(r'(\S+)\t(\S+)\t', lines[idx+1])
+					except IndexError:
+						break
+					if next_word:
+						output.append((m_api.group(1), next_word.group(1)))
+					else:
+						output.append((m_api.group(1), ''))
 	# print output
 	return HttpResponse(json.dumps(output))
 
