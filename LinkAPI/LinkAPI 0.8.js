@@ -23,7 +23,7 @@ var toBackEndData = {};
 var myNodes = [];
 var entityList = {};
 var linkError = false;
-var model_mode = 1;
+var model_mode = 1; // 0:CRF++, 1:CRFsuite
 
 /* Identify API component */
 function identifyAPI() {
@@ -100,25 +100,22 @@ function extractEntity(entityJSON) {
     myNodes.forEach(function(e, index) {
         var startIdx = 0;
         var remainingText = '';
-        var temp = 1;
+        var found = 1;
         var retry = 0;
         var ori_e = e.textContent;
         var check_next = 0;
 
-        while (entityJSON[0] && e.textContent.substr(startIdx).indexOf(entityJSON[0][0]) != -1 && temp) {
-            temp = 0;
+        while (entityJSON[0] && e.textContent.substr(startIdx).indexOf(entityJSON[0][0]) != -1 && found) {
+            found = 0;
             findAndReplaceDOMText(e, {
                 find: RegExp(entityJSON[0][0]),
                 forceContext: function(el) {
                     return el.matches('.api');
                 },
                 replace: function(portion, match) {
-                    if (startIdx == 0)
-                        startIdx = match.endIndex;
-
                     check_next = (ori_e.substr(match.endIndex).trim().lastIndexOf(entityJSON[0][1], 0) === 0);
                     remainingText = ori_e.substr(match.endIndex);
-                    if(check_next || !remainingText || retry > 3) {
+                    if(check_next || !remainingText) {
                         var el = document.createElement('span');
                         el.classList.add('api');
                         el.setAttribute("id", numOfEntities-entityJSON.length);
@@ -126,7 +123,15 @@ function extractEntity(entityJSON) {
                         el.innerHTML = portion.text;
                         startIdx = match.endIndex;
                         retry = 0;
-                        temp = 1;
+                        found = 1;
+                        return el;
+                    } else if (retry > 3) {
+                        var el = document.createElement('non');
+                        el.classList.add('api');
+                        el.innerHTML = portion.text;
+                        startIdx = match.endIndex;
+                        retry = 0;
+                        found = 1;
                         return el;
                     } else {
                         retry++;
