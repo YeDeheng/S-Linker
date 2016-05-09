@@ -197,7 +197,7 @@ def link_entity(request):
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(r'^%s\.' % k, v+'.', value)
+				value = re.sub(r'^%s\.' % k, v+'.', value).strip('?:!.,;')
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
@@ -243,10 +243,11 @@ def link_entity(request):
 	# print qualified_entity_list
 
 	for key in data_entity:
+		curr_key = key
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(r'^%s\.' % k, v+'.', value)
+				value = re.sub(r'^%s\.' % k, v+'.', value).strip('?:!.,;')
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
@@ -322,15 +323,19 @@ def link_entity(request):
 
 					# class
 					result['distance'] = -1
+					temp = []
 					for valid_class in class_list:
 						# if Levenshtein.ratio(valid_class, record.api_class) > 0.9:
 						if valid_class[0] in record.api_class:
 							mark[4] = True
-							result['distance'] = abs(int(key) - valid_class[1])
+							temp.append(abs(data_entity_index[int(curr_key)] - valid_class[1]))
+
+					if mark[4]:
+						result['distance'] = min(temp)
 
 					result['mark'] = mark
 					result['api_class'] = record.api_class
-					result['score'] = sum(b<<i for i, b in enumerate(mark))
+					result['score'] = sum(b<<i for i, b in enumerate(reversed(mark)))
 					result['name'] = value
 					result['url'] = record.url
 					result['lib'] = record.lib
@@ -338,16 +343,15 @@ def link_entity(request):
 					result['tfidf'] = str(tdidf_result[idx+1])
 					result_sublist.append(result)
 
-					minDistanceResult = []
-					try:
-						minDistanceResult = min((x for x in result_sublist if x['distance'] >= 0), key=lambda x:x['distance'])
-					except (ValueError, TypeError):
-						pass
+				minDistanceResult = 0
+				try:
+					minDistanceResult = min((x for x in result_sublist if x['distance'] >= 0), key=lambda x:x['distance'])
+				except (ValueError, TypeError):
+					pass
+				if minDistanceResult:
+					i = result_sublist.index(minDistanceResult)
+					result_sublist[i]['score'] = result_sublist[i]['score'] + 1
 
-					if minDistanceResult:
-						for key, result in enumerate(result_sublist):
-							if(result['url'] == minDistanceResult['url']):
-								result['score'] = result['score'] + 1
 				result_list.append(result_sublist)
 
 	# print result_list
