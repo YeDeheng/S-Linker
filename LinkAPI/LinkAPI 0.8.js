@@ -51,8 +51,8 @@ function identifyAPI() {
     toNERData['mode'] = model_mode;
     GM_xmlhttpRequest({
         method: "POST",
-        url: "http://127.0.0.1:8000/extractentity/", //localhost
-        // url: "http://128.199.217.19/entity_recognition/", //external server
+        // url: "http://127.0.0.1:8000/extractentity/", //localhost
+        url: "http://128.199.217.19/entity_recognition/", //external server
         data: JSON.stringify(toNERData),
         headers: {
             "Content-Type": "application/json; charset=utf-8"
@@ -248,8 +248,8 @@ function entityLinking() {
     // retrieve list of linked code elements
     GM_xmlhttpRequest({
         method: "POST",
-        url: "http://127.0.0.1:8000/linkentity/", //localhost
-        // url: "http://128.199.217.19/entity_linking/", //external server
+        // url: "http://127.0.0.1:8000/linkentity/", //localhost
+        url: "http://128.199.217.19/entity_linking/", //external server
         data: JSON.stringify(toBackEndData),
         headers: {
             "Content-Type": "application/json; charset=utf-8"
