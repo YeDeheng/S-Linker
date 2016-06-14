@@ -42,11 +42,12 @@ def gettitle():
 	f2 = open('sel.txt', 'r')
 	for line in f2:
 		line = line.strip()
+		#print line
 		if line in all_sent:
 			idx = all_sent.index(line)
 		else:
 			raise Exception('line not in all_sent!')
-		print "idx is : ", idx
+		#print "idx is : ", idx
 		for i in title_idx:
 			if i == idx:
 				title.append(all_sent[i])
@@ -54,7 +55,7 @@ def gettitle():
 			elif i < idx:
 				continue
 			else:
-				print 'i is: ', i, 'i index is: ', title_idx.index(i)
+				#print 'i is: ', i, 'i index is: ', title_idx.index(i)
 				title.append( all_sent[ title_idx[title_idx.index(i)-1] ] )
 				break
 
@@ -67,12 +68,16 @@ def getid():
 	db = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="stackoverflow20160301")
 	cur = db.cursor()
 	title = gettitle()
+	question_id = []
 	for t in title:
-		print t
-		cur.execute("SELECT Id FROM posts where Title=%s" %t)
-		question_id = cur.fetchall()[0][0]
-		print question_id
+		#print "hello %s" %(t)
+		stat = "SELECT Id FROM posts where Title=\"%s\"" %(t)
+		cur.execute(stat)
+		question_id.append(cur.fetchall()[0][0])
+		#print question_id
+	return question_id
+
 
 if __name__ == "__main__":
-	getid()
+	print getid()
 	#conlltotext()
