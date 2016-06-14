@@ -1,4 +1,0 @@
-Rolling median in python
-Greetings all , I have two series of data : daily raw stock price returns ( positive or negative floats ) and trade signals ( buy=1 , sell=-1 , no trade=0 ) .
-There is a fantastic module called pandas that was written by a guy at AQR ( a hedge fund ) that excels at calculations like this ... what you need is a way to handle " missing data " ... as someone mentioned above , the basics are using the nan ( not a number ) capabilities of scipy or numpy ; however , even those libraries don't make financial calculations that much easier ... if you use pandas , you can mark the data you don't want to consider as ` nan ` , and then any future calculations will reject it , while performing normal operations on other data .
-
