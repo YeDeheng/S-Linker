@@ -1,3 +1,10 @@
-Rolling median in python
-Greetings all , I have two series of data : daily raw stock price returns ( positive or negative floats ) and trade signals ( buy=1 , sell=-1 , no trade=0 ) .
-There is a fantastic module called pandas that was written by a guy at AQR ( a hedge fund ) that excels at calculations like this ... what you need is a way to handle " missing data " ... as someone mentioned above , the basics are using the nan ( not a number ) capabilities of scipy or numpy ; however , even those libraries don't make financial calculations that much easier ... if you use pandas , you can mark the data you don't want to consider as ` nan ` , and then any future calculations will reject it , while performing normal operations on other data .
+If you are trying to create an animation , look in to the ` animation ` module of matplotlib , it takes care of a lot of the details for you . 
+Apparently , the " Animation " class of Matplotlib runs the animation in a separate thread . 
+It simply don't use the Animation class and builds its own animation from crash . 
+I think ` axis ([ xo , x1 , y0 , y1 ])` is in terms of proportion of the Figure , not the data transform . 
+I used the scatter function and plotted the points , but the surface function is not working ( the window is empty ) . 
+The solution I found for this involves using Normalize to make a normalised colour list based on the relevant data , mapping it to a ScalarMappable , and using that to set the face colour and c limits on each frame of the animation . 
+But because all of the functionality relies on the hook , when the canvas is finally shown I presume Python's garbage collection has removed the Animation instance --- since it was never assigned to a variable --- and therefore the animation can never be started . 
+Notice ` xytext = ( 0 , 0 )` means no offset , and omitting ` arrowprops ` causes ` plt.annotate ` to not draw an arrow . 
+I tried adding ` / Library / TeX / Root / bin / universal-darwin ` to the Global Python Path of the Project Properties , but I still get the same errors . 
+My Python Path is correct C :\ Python27_32bit\ and I also have \lib\ site-packages \ and \DLL included correctly . 

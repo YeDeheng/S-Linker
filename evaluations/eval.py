@@ -1,19 +1,25 @@
 import sys
 import MySQLdb
 
-# simple conll to txt conversion
-# python eval.py in_1.conll out_1.txt
+# simple conll to txt conversion 
+# Usage: python eval.py in.conll out.txt out.ann
 def conlltotext():
 	f = open(sys.argv[1], 'r')
-	fout = open(sys.argv[2], 'w')
+	fout1 = open(sys.argv[2], 'w')
+	fout2 = open(sys.argv[3], 'w')
 	for line in f:
 		if line != '\n':
-			token = line.strip().split('\t')[0]
-			fout.write(token + ' ')
+			columns = line.strip().split('\t')
+			token = columns[0]
+			anno = columns[1]
+			fout1.write(token + ' ')
+			fout2.write(anno + ' ')
 		else:
-			fout.write(line)
+			fout1.write(line)
+			fout2.write(line)
 	f.close()
-	fout.close()
+	fout1.close()
+	fout2.close()
 
 
 # given a stack overflow sentence, retrieve the question title
@@ -63,9 +69,10 @@ def getid():
 	title = gettitle()
 	for t in title:
 		print t
-		cur.execute("SELECT Id FROM posts where Title='Rolling median in python'")
+		cur.execute("SELECT Id FROM posts where Title=%s" %t)
 		question_id = cur.fetchall()[0][0]
 		print question_id
 
 if __name__ == "__main__":
 	getid()
+	#conlltotext()
