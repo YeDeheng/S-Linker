@@ -58,11 +58,12 @@ def gettitle():
 # input a title, get the question ID
 def getid():
 	# connect to DB
-	db = MySQLdb.connect(host="localhost", user="root", passwd="ydh0114", db="stackoverflow20160301")
+	db = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="stackoverflow20160301")
 	cur = db.cursor()
 	title = gettitle()
 	for t in title:
-		cur.execute("SELECT Id FROM posts where Title=%s" %(t))
+		print t
+		cur.execute("SELECT Id FROM posts where Title='Rolling median in python'")
 		question_id = cur.fetchall()[0][0]
 		print question_id
 
