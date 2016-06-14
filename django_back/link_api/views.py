@@ -89,28 +89,64 @@ def crawl(links, token_list):
 @csrf_exempt
 def extract_entity(request):
 	print 'Begin Entity Recognition'
-	full_text = request.body
+	body_unicode = request.body.decode('utf-8')
+	data = json.loads(body_unicode)
+	full_text = data['fullText'].encode('ascii', errors='xmlcharrefreplace')
+	mode = int(data['mode'])
 	with open(os.path.join(settings.STATIC_ROOT, 'demo.txt'), 'w') as demo_file:
 		demo_file.write(full_text)
 
-	texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo.conll'))
-	featureextractor.main(os.path.join(settings.STATIC_ROOT, 'demo.conll'), os.path.join(settings.STATIC_ROOT, 'demo.data'))
-	p = subprocess.Popen(['crf_test', '-m', os.path.join(settings.STATIC_ROOT, 'CRFmodel0'), os.path.join(settings.STATIC_ROOT, 'demo.data')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	out, err = p.communicate()
-	arr = out.splitlines()
-	output = []
-	
-	# write the output to result.txt
-	# with open(os.path.join(settings.STATIC_ROOT, 'result.txt'), 'w') as demo_file:
-	# 	demo_file.write(out)
+	if mode == 0:
+		# CRF++
+		texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo.conll'))
+		featureextractor.main(os.path.join(settings.STATIC_ROOT, 'demo.conll'), os.path.join(settings.STATIC_ROOT, 'demo.data'))
+		p = subprocess.Popen(['crf_test', '-m', os.path.join(settings.STATIC_ROOT, 'CRFmodel0'), os.path.join(settings.STATIC_ROOT, 'demo.data')], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		out, err = p.communicate()
+		arr = out.splitlines()
+		output = []
+		
+		# write the output to result.txt
+		with open(os.path.join(settings.STATIC_ROOT, 'result.txt'), 'w') as demo_file:
+			demo_file.write(out)
 
-	for idx, line in enumerate(arr):
-		# if not line.endswith("O") and line:
-		if line.endswith("B-API"):
-			# remove remaining part after a tab (only entity name)
-			temp = re.sub('\t(.+)', ' ', line).strip()
-			if (re.search('[a-zA-Z]+', temp)):
-				output.append(temp)
+		for idx, line in enumerate(arr):
+			m_api = re.match(r'(\S+)\t(.+)(B-API|I-API)', line)
+			if m_api:
+				try:
+					next_word = re.match(r'(\S+)\t(.+)', arr[idx+1])
+				except IndexError:
+					break
+				if next_word:
+					output.append((m_api.group(1), next_word.group(1)))
+				else:
+					output.append((m_api.group(1), ''))
+	else:
+		# CRFsuite
+		texttoconll.main(os.path.join(settings.STATIC_ROOT, 'demo.txt'), os.path.join(settings.STATIC_ROOT, 'demo2.conll'))
+
+		extract_feature_cmd = "python " + os.path.join(settings.STATIC_ROOT, 'enner.py') + " bc-ce < " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " > " + os.path.join(settings.STATIC_ROOT, 'demo2.data')
+		subprocess.call(extract_feature_cmd, shell=True)
+
+		crfsuite_cmd = "crfsuite tag -m " + os.path.join(settings.STATIC_ROOT, 'model') + " " + os.path.join(settings.STATIC_ROOT, 'demo2.data') + " > " + os.path.join(settings.STATIC_ROOT, 'label.txt')
+		subprocess.call(crfsuite_cmd, shell=True)
+
+		paste_cmd = "paste " + os.path.join(settings.STATIC_ROOT, 'demo2.conll') + " " + os.path.join(settings.STATIC_ROOT, 'label.txt') + " > " + os.path.join(settings.STATIC_ROOT, 'final.txt')
+		subprocess.call(paste_cmd, shell=True)
+
+		output = []
+		with open(os.path.join(settings.STATIC_ROOT, 'final.txt'), 'r') as f:
+			lines = f.readlines()
+			for idx, line in enumerate(lines):
+				m_api = re.match(r'(\S+)\t(\S+)\t(B-API)', line)
+				if m_api:
+					try:
+						next_word = re.match(r'(\S+)\t(\S+)\t', lines[idx+1])
+					except IndexError:
+						break
+					if next_word:
+						output.append((m_api.group(1), next_word.group(1)))
+					else:
+						output.append((m_api.group(1), ''))
 	# print output
 	return HttpResponse(json.dumps(output))
 
@@ -130,12 +166,20 @@ def link_entity(request):
 	encode_texts = data["texts"].encode('ascii', errors='xmlcharrefreplace')
 	full_text = encode_texts.translate(None, string.punctuation)
 
-	variations = {'np.':'numpy.', 'mpl.':'matplotlib.', 'pd.':'pandas.', 'fig.':'figure.', 'plt.':'pyplot.', 'bxp.':'boxplot.', 'df.':'dataframe.'}
+	variations = {'np':'numpy', 'mpl':'matplotlib', 'pd':'pandas', 'fig':'figure', 'plt':'pyplot', 'bxp':'boxplot', 'df':'dataframe'}
 	import_variations = {}
+	declare_variations = {}
+	
 	m = re.findall(r'import (\S+) as (\S+)', encode_texts)
 	if (m):
-		import_variations = dict((y+'.', x+'.') for x, y in m)
+		import_variations = dict((y, x) for x, y in m)
+
+	n = re.findall(r'(\w+)\s?=\s?([A-Za-z0-9_\.]+)\(', encode_texts)
+	if (n):
+		declare_variations = dict((x, y) for x, y in n)
+
 	variations.update(import_variations)
+	variations.update(declare_variations)
 
 	href_info = [];
 	result_list = [];
@@ -153,7 +197,7 @@ def link_entity(request):
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(k, v, value)
+				value = re.sub(r'^%s\.' % k, v+'.', value).strip('?:!.,;')
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
@@ -199,10 +243,11 @@ def link_entity(request):
 	# print qualified_entity_list
 
 	for key in data_entity:
+		curr_key = key
 		value = data_entity[key]
 		try:
 			for k, v in variations.iteritems():
-				value = re.sub(k, v, value)
+				value = re.sub(r'^%s\.' % k, v+'.', value).strip('?:!.,;')
 			record_list = Record.objects.filter(name=value)
 		except Record.DoesNotExist:
 			continue
@@ -278,15 +323,19 @@ def link_entity(request):
 
 					# class
 					result['distance'] = -1
+					temp = []
 					for valid_class in class_list:
 						# if Levenshtein.ratio(valid_class, record.api_class) > 0.9:
 						if valid_class[0] in record.api_class:
 							mark[4] = True
-							result['distance'] = abs(int(key) - valid_class[1])
+							temp.append(abs(data_entity_index[int(curr_key)] - valid_class[1]))
+
+					if mark[4]:
+						result['distance'] = min(temp)
 
 					result['mark'] = mark
 					result['api_class'] = record.api_class
-					result['score'] = sum(b<<i for i, b in enumerate(mark))
+					result['score'] = sum(b<<i for i, b in enumerate(reversed(mark)))
 					result['name'] = value
 					result['url'] = record.url
 					result['lib'] = record.lib
@@ -294,16 +343,15 @@ def link_entity(request):
 					result['tfidf'] = str(tdidf_result[idx+1])
 					result_sublist.append(result)
 
-					minDistanceResult = []
-					try:
-						minDistanceResult = min((x for x in result_sublist if x['distance'] >= 0), key=lambda x:x['distance'])
-					except (ValueError, TypeError):
-						pass
+				minDistanceResult = 0
+				try:
+					minDistanceResult = min((x for x in result_sublist if x['distance'] >= 0), key=lambda x:x['distance'])
+				except (ValueError, TypeError):
+					pass
+				if minDistanceResult:
+					i = result_sublist.index(minDistanceResult)
+					result_sublist[i]['score'] = result_sublist[i]['score'] + 1
 
-					if minDistanceResult:
-						for key, result in enumerate(result_sublist):
-							if(result['url'] == minDistanceResult['url']):
-								result['score'] = result['score'] + 1
 				result_list.append(result_sublist)
 
 	# print result_list
