@@ -1,0 +1,448 @@
+If you are trying to create an animation , look in to the ` animation ` module of matplotlib , it takes care of a lot of the details for you .
+Apparently , the " Animation " class of Matplotlib runs the animation in a separate thread .
+It simply don't use the Animation class and builds its own animation from crash .
+I think ` axis ([ xo , x1 , y0 , y1 ])` is in terms of proportion of the Figure , not the data transform .
+I used the scatter function and plotted the points , but the surface function is not working ( the window is empty ) .
+The solution I found for this involves using Normalize to make a normalised colour list based on the relevant data , mapping it to a ScalarMappable , and using that to set the face colour and c limits on each frame of the animation .
+But because all of the functionality relies on the hook , when the canvas is finally shown I presume Python's garbage collection has removed the Animation instance --- since it was never assigned to a variable --- and therefore the animation can never be started .
+Notice ` xytext = ( 0 , 0 )` means no offset , and omitting ` arrowprops ` causes ` plt.annotate ` to not draw an arrow .
+I tried adding ` / Library / TeX / Root / bin / universal-darwin ` to the Global Python Path of the Project Properties , but I still get the same errors .
+My Python Path is correct C :\ Python27_32bit\ and I also have \lib\ site-packages \ and \DLL included correctly .
+Adding Python Path on Windows 7
+Append ` ; C :\ python27\Scripts ` to the end of ` Path ` variable
+I use a palette file that I'm able to create using GIMP + Sample a Gradient Along a Path .
+Spine position is specified by a 2 tuple of ( position type , amount ) .
+Annotation along a curve in matplotlib
+Heat Map Annotation with text
+Annotation on top of the bars show the actual percentage of that category .
+Text File .
+I'm using Ubuntu and Sublime Text .
+Check this page : Text Rendering with LaTeX .
+When using Matplotlib ( Pylab ) for rendering Text with the same metrics as AriaL ( e.g. , Arial itself or Liberation Sans ) output looks ok - e.g. , the width of the legend box is right .
+Text box with line wrapping in matplotlib ?
+Python / Matplotlib - Quickly Updating Text on Axes
+Text display problem with matplotlib ?
+Network from Table ( Text / MS Excel ) ..
+Text alignment in a Matplotlib legend
+Underlining Text in Python / Matplotlib
+( Text colour comes out as black ) #CODE
+However , when I paste this code into my Wordpress page ( using the Text editor , not the visual editor ) nothing happens .
+This generates the plot but the Legend B is placed at the upper right hand side corner and Legend A is by default placed at the left hand upper corner .
+Multiple Pie Charts with a Shared Legend
+You can add a legend to only the first axes after plotting all of your pie charts : #CODE
+Matplotlib : Legend not displayed properly
+Legend colors in Matplotlib table function ?
+Legend transparency , when using secondary axis
+Legend is outside the frame .
+Button 1 : Shows the pointscores of John and Daniel in level 1 .
+How to get multiple Button Click Events in Python
+Button click -> ser.write , ser.read , draw
+Another solution is print a ' Cursor ' or marker line on the plot , and change its coordinates with the mouse events .
+An Arrow would appear with data about the invisible line one , but he wanted info about line two .
+Arrow on a line plot with matplotlib
+Drawing Arrow in ( x , y ) coordinate in Python
+To be more specific , if you look at the answer to that question it shows how to make a 3D Arrow and use that to annotate points in a 3D plot -- I have used this recipe extensively and it makes me wonder how it isn't built into matplotlib yet .
+Node positions are generated , stored and assigned like this #CODE
+Node and edge attribute files are simply formatted : a node attribute file begins with the name of the attribute on the first line ( note that it cannot contain spaces ) .
+Normalize the input data and scale it
+Normalize your data .
+Normalize again
+Normalize your data , apply the colormap , save the image . matplotlib provides all the necessary functionality : #CODE
+Normalize histogram2d by bin area
+Python / Matplotlib - Figure Borders in wxPython
+gcf() means Get Current Figure
+Figure title with several colors in matplotlib
+However , the sample consists of distinct solutions which form lines in the parameter space such that putting everything into a matrix and using ` imshow ` is not desirable because of the pixelation artefacts ( Figure 1 ) .
+See Figure 2 .
+Labeling Figure from String List
+I was able to maximize Figure windows for TkAgg , QT4Agg , and wxAgg using the following lines : #CODE
+I want to draw a quadratic Figure .
+So I guess I have to built each button separately , and don't know how to " order " them in the buttons_frame 2 ) I am working within a for loop , so I can't use a " main " specifically for this . and 3 ) the Figure to plot is already created before entering the GUI .
+But I wonder if there is a way to do the same link ( when zooming on figure 1 , I get the same zoom on figure 2 on one particular axis ) when defining 2 different Figures ( I want those graph to appear far from each other so I guess that I can't put them in the same Figure ... )
+I removed the reference to Figure 0 and had it generate a new figure each time .
+Right now , that it the best I can do , see Figure .
+Sounds like you just want an image in the Figure , right ?
+You should perhaps try some converter that can produce DXF from EPS , PDF , SVG ...
+For example see this converter in java :
+You already have one such converter in your ` np.loadtxt ` method call .
+You can achieve this by defining a converter that converts sting representations of dates to ` datenums ` .
+Matplotlib Plot Lines Above Each Bar
+Matplotlib.pyplot Bar Plot Grouping Subplots
+How to properly give Annotations to Pandas Bar Charts ?
+Pandas , Bar Chart Settings Customization
+Two Bar Plots- Non side by side
+I have a couple of problems with the Bar Chart that I'm trying to create in python .
+I have a simple graph with a Navigation Tool Bar .
+Matplotlib Subplot Animation with Basemap
+Basic Animation with matplotlib's pyplot
+How Can I Save Animation.Artist animation ?
+Animation with contours matplotlib
+I found the solution ( set 2 ) that uses the mpl Toolkit and AA to allow sharing of the X Axis and present more than 2 scales . by changing the code to allow for set 2 is where I noticed problems .
+The side scales almost look good ( exception is repeats on the right ) and I CANNOT CHANGE FONT size of the X-Axis labels and Y Axis labels .
+Reverse Z Axis on matplotlib 3D Plot
+You have an example of the broken axis in the matplotlib examples : Broken Axis
+Axis scale with bins
+Converting Integer ( Day Count ) X Axis to Months
+3d Polygon Plot in matplotlib baselines slanted
+I am trying to create my own version of the 3D Polygon plot as shown on the Matplotlib web site :
+I'm trying to make a polar chart with matplotlib and python 2.7 , but I'm struggling on how to increase the space between the X-Axis and the Tick Labels for that same axis .
+Tick labels on x-axis aren't symmetric ( Matplotlib )
+Tick label displayed when clicking on graph ?
+Axes missing when plotting in matplotlib using vispy as backend
+In theory , this code doesn't change any coordinates ; it just gets the coordinates of each label , maps it to Axes coordinates using the Text object's internally-stored transform , and then sets the position .
+@USER I think he wants to get the tick positions in Axes coordinates .
+Axes fonts with text.usetex ' true ' does not use set font
+Also , when specifying where you want the subplot to be placed ( the third input to ` Figure.add_subplot() `) , you do not want to use ` y+1 ` because that would start at ` 1 ` and end at ` 6 ` which would go out of the available range of 0-5 .
+While it might be possible to hack ` JointGrid ` to get this to work , I suspect it will very likely be easier to just use ` kdeplot ` on one Axes , using ` twinx ` and ` twiny to place and scale the marginal plots properly .
+I want to transform those intensity values to pixel intensity values as in the following image :
+The longer the time period becomes , the sharper the peaks will become ( the Fourier transform of the cosines ): #CODE
+How to transform your data into this format is a simple question , maybe a bit googling and trial and error .
+Perhaps it is best to transform to linear coordinates and calculate how to produce the curved grid for the declination and the radial lines for the right ascension .
+Since my data is roughly spherical I triangulate the azimuth and zenith angles from the spherical coordinate transform of my data points .
+A workaround might be to log10 transform the data before plotting , but the approaches I have tried , #CODE
+Without having to transform everything to string or another kind of object ?
+However , the dates mysteriously transform themselves to an ugly and unreadable format when plotting the same data as a bar plot .
+I want to find out how to transform magnitude value of accelerometer to frequency domain .
+Then , you need to set the transform for the new lines on ` a_all ` to move them to the new axis .
+What about applying a rectangular ( ok , in three dimensions , cubic ) window to your field before fourier transform ?
+The canvas seems to get locked and after the call of the pick event I can not use the other functionalities as well .
+When it is triggered it seems that the canvas gets locked and I can not use any other functionality .
+I am trying to draw an arrow on the scatterplot .
+Are these parametric orbits , so that you could draw vertical lines for each time ( or whatever ) _t_ ?
+I've follow this subject : How to draw planes from a set of linear equations in Python ?
+I am able to draw with all variables at x-axis if convert it to bar graph .
+But in my particular case I have to draw Line2D instances using Points coordinates on top of the regular plots that are all using Data coordinates .
+I'm using imshow() to draw a 2D numpy array , so for example : #CODE
+I need to draw all function in the same window
+I want to draw a small red box around one of the ticklabels , as so :
+I draw 4D plot .
+I'd like to draw / plot an horizontal line on top of the heatmap like in this figure
+How do I draw edge labels for MultiGraph in NetworkX ?
+How to draw a contour plot using Python ?
+I tried to draw a contour plot using Python .
+The second option is a touch more verbose , but has the advantage that the y-axis limits on the second plot will autoscale as you'd expect .
+I included the code to autoscale the viewport , but that's not strictly necessary .
+possible duplicate of [ How to autoscale y axis in matplotlib ? ] ( #URL )
+if the image is a NxM array of any type , it is interpreted through the colormap ( autoscale , if not indicated otherwise ) .
+Now I changed my mind and decide to autoscale the data ( and the view ) , expecting these limits :
+I would like to be able to autoscale a matplotlib figure to make arbitrarily placed text annotations visible .
+I have to refresh the page to get the tooltips back . btw " pan " * does * work .
+will refresh your system's reference to the bash_profile and you should be good to go in importing and using matplotlib
+Id like the user to be able to update an existing and open axis i.e. to refresh the axis .
+Placing Custom Images in a Plot Window -- as custom data markers or to annotate those markers
+How to annotate / highlight a 3d plot in MatPlotLib
+Well , it takes a loop to annotate all data points , I thought that there should be a function that does just that .
+You can annotate a specific point in the image using ` plt.text ( x , y , str )` .
+To state it in a general form , I'm looking for a way to join several points with a gradient color line using matplotlib , and I'm not finding it anywhere .
+Now instead of straight arrows , I want to join points by curve arrows .
+If you like , join circos's google group to discuss : #URL
+Then join me in upvoting that answer and that comment :-)
+Because there have been closest points but when we join them they lead to an intersections or points which are not so close but should be joined together
+@USER Because Python automatically join two adjacent strings into one string .
+This produces a figure like the first figure at How to join overlapping circles ?
+Matplotlib has lots of pre-defined colormaps for you to use .
+Here are all of the predefined colormaps .
+For me the simplest way is plotting directly the masks with imshow , passing different colormaps .
+There is a list of colormaps to choose from here .
+There is also a way to define custom colormaps .
+The list of available colormaps by default is here .
+You can add your own colormaps to ` _cm.py ` in your mpl directory and then change your rc file .
+How can I tell append_axes that I want to append the y subplot to the right of the " main axes " containing the scatter plot ?
+I got a boxplot graph like this :
+add boxplot to other graph in python
+but when I do it on the ' link ' series I can draw the boxplot correctly .
+and I am able to draw the boxplot .
+Or , more generally , modify / transform to you heart's content , and then boxplot .
+If the ticklabels are already set to a string as in e.g. a boxplot , this is still working .
+How do I add inset axes and zoom in on the first boxplot of the two ?
+I'm not setting the position of each boxplot , so I don't know where they will appear exactly .
+I wanted to add a box for each boxplot with a zoomed-in view on a specific y-axis range .
+UserWarning : 2D hist input should be nsamples x nvariables ;
+I'm doing a hist plot and I want some numbers shown in the plot , so I put in a text box using mathtext for the text , but I doesn't work and I can't see why .
+This lead to my colorbar having sqrt ticks and I want to translate them back to the original values .
+avoiding the local cache when fetching yahoo finance data from matplotlib.finance in python
+I am fetching yahoo finance data in Python through this interface :
+It would also be worth looking at the scatter plot documentation at #URL #CODE
+I am using the following code to stitch a .png into a scatter plot from MATPLOTLIB .
+Now I want to create a scatter plot with the data above ..
+matplotlib : Understanding and changing axis labels for a scatter plot updated incrementally
+I have a script that generates scatter plots for data being generated by a hardware device .
+I build a scatter plot using matplotlib and python2.7
+Build a scatter plot for baz based on the x-axis ( foo ) and y-axis ( bar )
+It is a normal scatter plot .
+Value Error with color array when slicing values for scatter plot
+I want to specify the frequency of markers that are printed in my scatter plot .
+Regression line and fitted curve for scatter plots in matplotlib
+but ` from matplotlib.path import Path ` throws #CODE
+The Path object does not store the points along a Bezier curve , just the minimum parameters it needs .
+Users of Path objects should not access the vertices and codes arrays
+The trick is to use Path and PathPatch .
+This allows you to get the Matplotlib Path vertices and codes in the projection coordinates which you can then convert into a new Path .
+I was playing with PathCollection ( my dyslexia is killing me switching between Path and Patch ) , and if I can get a unit circle drawn and I can apply an affine transformation to it , then I think it should work , as it doesn't seem to inherently fill the space .
+Thus the ` Spine ` objects are in question , and a ` Spine ` is a ` Patch ` is an ` Artist ` , none of which seem to have anything like the ` set_solid_capstyle() ` of ` Line2D ` , so I'm not sure how or where to force a particular capstyle , or if it's even possible .
+You can use the ` set_position() ` method of the ` Spine ` class : #CODE
+You mentioned the use of ` Locator ` and ` Formatter ` objects in your comment .
+You need to call remove on the instance of the ` Annotation ` object .
+Using Annotation Instead of Ticklabels
+What is the difference between a Text instance and string in python ?
+I believe the anti-aliasing of Text objects is up to the font engine being used .
+What you should do is save a reference to the first ` Text ` object and update its contents by calling its ` set_text() ` method .
+There is a references to the Text object returned by the original setting of suptitle in figure.texts .
+I'm having a problem with the Text object that matplotlib use to represent the ticklabels .
+I think you need to displace the ` Text ` object , using the ` set_position (( x , y ))` method .
+This includes ` Text ` objects , ` Line2D ` objects , ` collection ` objects , ` Patch ` objects ...
+Text object in matplotlib doesnt respond to zooming properly
+After drawing a matplotlib Text instance and then interactively panning , the resulting drawn text is clipped to the data window but not the surrounding bounding box .
+Something like ` Text ( 2 , 0 , u'Text ( 2 , 0 , u " Text ( 0.4 , u\ ' 0.4 \ ')")')` .
+` plt.legend ` returns a ` Legend ` object with methods that allow you to modify the appearance of the legend .
+So first we'll save the ` Legend ` object : #CODE
+In practice I seem to end up mixing them both myself in SW ; it's largely a matter of taste whether you go through the pyplot API or access the objects . pyplot is certainly very convenient although as you want to do more complex / exotic things you'll find what you can do with pyplot alone limited and you'll need to get to know at least the full API's Axes , Figure , Legend and Path objects better .
+There was a refactor of the ` Legend ` class awhile back .
+call ` Legend.get_texts() ` will get a list of Text object in the legend object : #CODE
+Some parameters could easily be read from the ` Legend ` object , others ( like ` title ` , ` fancybox `) required some ' artistics ' .
+42 from matplotlib.legend import Legend
+How do I choose the optimum width for a matplotlib Button ?
+I removed ` color=axcolor ` from the ` Button ` call ; and I added a ` plt.show() ` before the event connect , otherwise a figure window didn't appear for me ( neither through ` ipython ` , nor with ` python `) .
+button = Button ( ax=reset_axis , label= ' Reset ' , color= ' lightblue ' , hovercolor= ' 0.975 ')
+` tbar.add_button ( a Button object ); `
+For your buttons to work , you need to keep a reference to the ` Button ` object around .
+I know how to add and work with single cursor ` self.cursor = Cursor ( self.static_canvas.Dataplot , useblit=True , color= ' red ' , linewidth=2 )` , but what I should do to create to cursors ?
+I think tillsten is right -- study how the [ ` Cursor ` class ] ( #URL ) does it .
+I've checked briefly , but I don't know how to modify the properties of an ` Arc ` instance , although I'm sure it's possible .
+You could also try passing a ` Arrow ` instance as marker , but I'm not sure whether that works .
+Currently , I don't think it possible as the ` Arrow ` class only supports `' solid ' | ' dashed ' | ' dashdot ' | ' dotted '` four different linestyles .
+The Node class has the coordinates stored as members ( x and y ) , as well as index .
+You can scale your z values to fit this range with Normalize .
+You should mention the ` Normalize ` methods here as well .
+Matplotlib provides the class ` Normalize ` for that : #CODE
+Create a new instance of ` Normalize ` for each image you want to process .
+And then you can also replicate the functionality of ` Normalize ` ( since you seem to not like it ): #CODE
+Use these to create a ` Normalize ` instance ( other normalisation classes are available , e.g. log scale ) .
+The documentation of Normalize might be a bit deceiving here : ` process_value ` is a function which is only used for preprocessing ( and static ) .
+I have several questions regarding the Normalize class in Matplotlib .
+with your own ` Normalize ` function .
+This might be why they've avoided implementing it as part of Normalize .
+matplotlib : can I create AxesSubplot objects , then add them to a Figure instance ?
+Also do you use Figure from the local matplotlib installation or not ?
+Additionally , there are functions from the pyplot interface and there are methods on the ` Figure ` class .
+I'll assume in the following that ` fig ` is an instance of a ` Figure ` :
+Both the Figure and the Axes class have a ` clear() ` method .
+I had this same problem , and it was caused by calling ` show() ` on the Figure object instead of the pyplot object .
+It got wrapped up in a subclass of Figure , which also got level-of-detail functionality and context menus .
+I have an external function which returns a Figure object , and in this situation , each Figure object is composed of exactly one Axes object .
+While a search did lead me to see that pyplot.figure() is the development team's recommended instantiation technique , it doesn't change the question : is there any way to do Axes / Figure copy construction and Figure construction via composition of copied Axes ?
+A reference to it isn't stored in the ` Figure ` object , but is stored in the ` Canvas ` object so you can destroy a window via #CODE
+Removing the ` frameon=False ` option from ` f = Figure ( figsize =( 12 , 5 ) , dpi=100 , frameon=False )` solved the issue .
+I used the Bar class to plot length of videos vs views which are the x and y values of the tuples .
+Animation will not work on inplace ( or inline ? ) on notebook .
+By artifacts , I now understand to mean you are creating a second ` Animation ` object and what you get is both of them running in parallel ( which I am not sure what I expect to happen there ) .
+by ` ax ` I mean the current ` Axis ` object , which you were getting at via ` gca ` .
+Your legend command is using the markers , not the lines as inputs by using ` plot [ 0 ]` .
+` Axes ` objects know about things like tick location and labels and the display range ( which it does by knowing about ` Axis ` object , but that is getting even more into the weeds ) .
+Use Axis method ` set_xscale ` or ` set_yscale ` .
+` ax.set_xticks() ` is a method of the ` Axes ` object , whilst ` matplotlib.ticker.FixedLocator ` is an object which is used with the ` Axis ` object ( ` Axes ` is basically the whole graph , whilst ` Axis ` is just one of the ( two ) axis ( x or y ) .
+This is not particularly well documented , but ` Polygon ` objects have a pair of methods ` get_xy ` and ` set_xy ` .
+In particular , if / when there are so many circles for the figure to become connected , the ` for polygon in polygons : ` fails with a ` TypeError : ' Polygon ' object is not iterable ` .
+Just use the ` Polygon ` or ` Rectangle ` classes : #CODE
+As you can see , the edge is center-positioned along the border of the domain of the Rectangle object , and so bleeds into this domain .
+You can do this by overplotting a Rectangle patch on the cell that you would want to highlight .
+Currently I use the ` add_patch ( Rectangle ( ... ))` , but it does not fit really well .
+Unfortunately it seems that the ' Rectangle ' object has no attribute ' set_bottom ' .
+You can acces ALL the properties of a ` Tick ` object using this approach : #CODE
+Fortunately you can update figures you've moved to where you want them pretty easily , by using the object interface specifically , and updating the Axes object without creating a new figure .
+( You can also always find this data inside the ` Axes ` object if you know where to look . )
+By deferring the expense of drawing you can greatly improve the performance of functions that make many calls to ` Figure ` and ` Axes ` methods .
+` Figure.add_subplot() ` returns an ` Axes ` instance , and ` pyplot.subplots() ` returns an ` Axis ` object as second output parameter .
+As a side note , it is better to pass ` Axes ` objects into your function than create them ( implicitly ) internally .
+Here , what you have done is capture the ` Axes ` instance that is returned from ` add_subplot() ` .
+If I create an ` Axes ` object in ` matplotlib ` and mutate it ( i.e. by plotting some data ) and then I call a function without passing my ` Axes ` object to that function then that function can still mutate my ` Axes ` .
+Pass multiple matplotlib Axes objects from generator function and display them
+The ` transform ` in this case is a ` BboxTransformTo ` object , which :
+You can use the ` transform ` keyword : #CODE
+But when I checked the source code of draw_networkx_nodes draw_networkx , I realized that it is not a straight forward task as the draw function stores the positions ( nodes and edges ) in a numpy array , send it to the ax.scatter function of matplotlib ( sourcecode ) which is a bit hard to manipulate without messing something up .
+This simply calls the draw method of the figure periodically .
+Then I just added a signal to the custom version and overrode the draw method .
+EDIT : I'm super blind , sorry for that , you're calling the draw method , however it is a good idea to add * args and ** kwargs to any overriden methods .. try that , and perhaps call FancyBboxPatch.draw at the end of overriden method
+I'm also panning and zooming into this figure , and have been using the draw method to show the new perspectives from zooming in ( using set_xlim and set_ylim ) and from panning ( drag_pan and start_pan ) .
+I would use ` ax.autoscale ( enable=False )` before your call to ` scatter ` .
+You can perhaps loop into your ` AxesSubplot ` objects and call ` autoscale ` passing the ` axis ` parameter : #CODE
+@USER - If you'd like to rescale the axes , call ` ax.autoscale() ` every time you remove a point .
+Python : Add x-y margins automatically with autoscale ( pyplot )
+Ahh , it's the call to ` autoscale ` that I'm missing .
+The trick is at the end , in the custom refresh method !
+For what you're wanting to do , you'd be far better off using annotate .
+It's quite simple to do manually with ` annotate ` .
+If you're wanting to adjust vertical alignment , horizontal alignment , etc , just add those as arguments to ` annotate ` ( e.g. ` horizontalalignment= ' right '` or equivalently ` ha= ' right '`)
+It's quite simple to do manually with ` annotate ` .
+You can use the annotate command to place text annotations at any x and y values you want .
++1 Just as a side note , annotate has " offseting the annotations a little " built-in .
+While there's nothing wrong with Ofri's answer , ` annotate ` is intended especially for this purpose : #CODE
+Just use ` annotate ` and specify axis coordinates .
+It is also possible to make an arrow with text , using the annotate method .
+The closest thing I have been able to find while searching here is the annotate command , but that appears to create a fixed label on the plot .
+` plt.annotate ( ' Something ' , ( 0 , 0 ) , ( 0 , -20 ) , xycoords= ' axes fraction ' , textcoords= ' offset points ' , va= ' top ')`
+@USER I'm not sure why we have to explicitly call ` draw ` .
+The ` boxplot ` function only plots quartiles ( 0 , 25 , 50 , 75 , 100 ) .
+Is there any way I can extract these values for use in my downstream code from the boxplot object ?
+I am plotting a non-normal distribution using boxplot and interested in finding out about outliers using boxplot function of matplotlib .
+You should use the ` hist ` function .
+An similar example of such plot is " hist ( x , orientation= ' horizontal ')" .
+I need to use the ` hist ` function , I have looked elsewhere on this site but I haven't found anything .
+I tried doing hist ( x / x.sum() ) but that reduce the values of the numbers in the x axis and does not change their frequency , so the y-axis is unchanged
+How can I prevent the labels of ` xticks ` from overlapping with the labels of ` yticks ` when using ` hist ` ( or other plotting commands ) in matplotlib ?
+An easy way to do this is to add ` 0j ` to the argument of the ` sqrt ` , like this , ` sqrt ( 1+0j- ( 1 / x ) **2 )` .
+You need to set the new coordinates of the datapoints in the internal ` _ofsets3d ` variable of the ` Line3DCollection ` object returned by the ` scatter ` function .
+You can use ` scatter ` for this , but that requires having numerical values for your ` key1 ` , and you won't have a legend , as you noticed .
+The ` scatter ` and ` hist ` commands really expect ` x ` and ` y ` to be 1D arrays .
+I'm wondering if it is possible to have individual alpha values for each point to be plotted using the scatter function of Matplotlib .
+The problem happens when I call the scatter function .
+Why do you say that reusing plt.figure will lead to memory issues ?
+I am using matplotlib.pyplot to create histograms .
+I corrected this using the ` set_position ` command .
+` np.asarray ( Image.fromarray ( image.astype ( ' uint8 ') *255 ) .convert ( ' L ')) .astype ( float ) / 255 `
+python : ImportError : No module named patheffects
+import matplotlib.patheffects
+` plt.bar ( left , height , width= 0.8 , bottom=None , hold=None , ** kwargs )`
+I typically have them in the ax.plot line .
+my attempt to define the aspect ratio for both ` y ` -axis while using ` twinx ` ( which does not work )
+For each of this point , I can calculate the value of my unordered categorical variable X .
+You can achieve it using the ` ScalarFormatter ` : #CODE
+@USER how is hexbin useful here ?
+Hmm , doesn't look like there is anything obvious is rcParams or the matplotlibrc file .
+What you're doing is aliasing ( " renaming ") matplotlib.font_manager to FontProperties so calling fontP = FontProperties() is actually calling matplotlib.font_manager which is not callable .
+I think changing the arrowstyle will help here .
+plt.plot ( x , z )
+` plt.tight_layout ( pad= 2.0 , h_pad= 6.5 , w_pad= 4.5 )` gives the desired result ( Fig.3 ) .
+Should work without the line ` X , Y = np.meshgrid ( X , Y )` .
+O1 = np.array ( new_OI )
+There's no need for a vector representation of each pixel , and ` imshow ` will be much faster .
+So definitely not in an equidistant meshgrid .
+Inserted after pyplot.savefig() and the problem seems to be solved .
+` numpy.polyfit ( x , y , deg , rcond=None , full=False , w=None , cov=False )`
+Simply putting in : ` bbox =d ict ( facecolor= ' blue ' , alpha= 0.5 )` in the ax.text statement changes the color .
+ax.set_xticks ([ " 1975-01-01 " , " 1980-01-01 " , " 1985-01-01 " , " 1990-01-01 " , " 1995-01-01 " ,
+Also , don't mix ` pyplot ` with guis ( unless you are explicitly using a non-interactive backend ) .
+FuncAnimation
+` x2 ' = -mu / np.sqrt ( x ** 2 + y ** 2 + z ** 2 ) * x ` ,
+matplotlib.pyplot.stem ( *args , ** kwargs )
+I've confirmed that this works for ` plot() ` as well as ` imshow() ` .
+PCA ( X ) is not the same thing as PCA ( X.T ) .T
+I should have used OffsetImage and AnnotationBbox .
+Using GridSpec
+Try removing that argument from your call to ` streamplot ` .
+Try `` ax.text ( 0 , 0 , ' whatever ')`` .
+matplotlib tripcolor - removing edges
+` ax.xaxis.get_children() [ 1 ] .set_size ( 15 )`
+I have tried lots of different combinations of the ax.plot() part , but if I change it to : #CODE
+but i want to keep the ytick marks only on the left hand side . thank you .
+fig is defined as : ` fig = plt.figure() `
+We used the same method , but I somehow missed ` set_markeredgewidth ` .
+---> 29 import matplotlib.colorbar
+ax.plot ( r.date , r.close )
+plt.plot()
+The ` .format ` form is the preferred way to do string formatting now as opposed to the ` % ` operator .
+` GridSpec ` works for me ( ` matplotlib ` v1.5.0 in case it matters ): #CODE
+A search of the ` matplotlib.pyplot ` API documentation does not reveal anything , so I'm afraid you'll have to live with using ` matplotlib.patches.Ellipse `
+for why ` LinearSegmentedColormap ` shows strange color , I think this link would be helpful .
+I did so both in the Windows shell and emacs shell and the same PYTHONPATH is used . doing the rcParams both return TkAgg .
+However , the savefig() output is too zoomed out , too general .
+plt.imshow ( Xt [ 0 , :] .reshape ( 105,105 ) .T , interpolation= ' nearest ' , cmap= cm.Greys_r ) and it gives me the correct flipped output .
+See [ ` matplotlib.pyplot.contourf `] ( #URL ) for example .
+Why pyplot ( matplotlib ) is joining points randomly ?
+x = np.array ([ 1 , 3 , 4 ]) , ([ 1 , 2 ])
+` np.arange ` doc
+plt.colorbar ( cs )
+` tick_params ` should do it .
+I have experiemented with turning interactivity on and off via ` plt.ioff() ` , but to no avail .
+don't do ` plt.xticks ...
+thx ! but in the end this worked : ` ax [ 1 ] .bar ( bins [: -1 ] , 1 . *hist / N , np.diff ( bins ) , log=True )`
+For example ` griddata ` , ` Rbf ` , ...
+It sounds like you would rather have an ` axhspan ` or ` axvspan ` .
+matplotlib : plt.isinteractive() returns 0 instead of True or False after plt.ion() is called , when the script is being run in a terminal ?
+matplotlib FuncAnimation input
+@USER Do I need to pass anything additional to ` ColorbarBase() ` ?
+In some other code , I used the OpenCV ` SaveImage ` on a single frame to provide a reference for what I would expect from ` imshow ` .
+AxesSubplot has no attribute hist2d - Matplotlib
+fig = plt.figure()
+customize ticks for AxesImage ?
+In addition , " changing plt.figure ( i )" is not correct .
+I tried it out . linecollection does not appear to work in 3D .
+You can verify it by calling ` plt.xlim() ` both before and after the ` pandas.plot() ` call .
+Did you try calling ` plt.show() ` ?
+Edit : My original answer used ` ax.scatter ` .
+The helper functions date2num() , num2date() and drange() are used to facilitate easy conversion to and from datetime and numeric ranges .
+Here's an example of how you can display multiple plots side-by-side below a larger one using Gridspec : #CODE
+I only just discovered the awesome that is ` matplotlib.mlab.psd() ` , but I am having one issue , that is : how can I change the frequency range used by the method ?
+Python Matlplotlib errorbar : some errors disappear
+@USER It says : font_manager attribute not found o_O .
+Documentation of legacy ` subplot() ` is [ here ] ( #URL ) and ` subplots() ` is [ here ] ( #URL ) .
+I am not completely sure if this is the kind of thing you're looking for , but ` legend() ` inside ` matplotlib.pyplot ` may be able to help you out .
+Is the PCA stuff really relevant ?
+Seaborns clustermap doesn't work with plt.tight_layout() .
+fig = plt.figure ( **figprops ) .
+From your remark that ` datetime ( 2009 , 10 , 7 , 0 ) .strftime ( ' %Hz%d%b ')` gave the right string I would've thought it worked .
+yerr = np.array ([ ])
+ax = fig.add_subplot ( 111 );
+plt.subplots :
+( It's not the edgecolor option in pcolormesh ) #CODE
+` plt.xlabel ( u'Wavelength ( \u03bc m )')`
+You may see that how ` .ix ` was used for selecting an interval .
+I am running the tutorial for pylearn2 and I'm getting some errors when it imports ` matplotlib.pyplot ` .
+then a call to ` fig.get_size_inches() ` gives ` [ 6 , 7.475 ]` .
+I am experiencing the same problem as described in import matplotlib.pyplot hangs after updating my matplotlib version ` import matplotlib.pyplot as plt ` hangs while executing ` fc-list ` .
+Using ` pcolor ` from matplotlib I am unable to do it because my pc goes easily out of memory ( more than 8G ) ..
++ " plt.plot ([ " + d.x1 + " , " + d.x2 + "] , [ " + d.y1 + " , " + d.y2 + "] , ' k- ') \n "
+I am trying to import Pylab using the ` import matplotlib.pyplot as plt ` .
+The plt.subplots_adjust method : #CODE
+for i , j in np.where ( significant ): print i , j
+ax = fig.add_subplot ( 111 , projection= ' 3d ')
+matplotlib.pyplot does savefig() but not show() in python3 but works in 2.7
+In this case , pcolor and pcolormesh will produce the same result .
+From the documentation of ` pyplot.errorbar() ` :
+Tkinter and pyplot running out of memory
+You've already created ` ax ` with ` plt.subplots ` so don't you just need to pass ` ax=ax ` to ` merged2.fcast.plot ` instead of setting ` ax= ...
+You also should not import pylab , you should do ` import matplotlib.pyplot as plt `
+Alright I got it to work by using plt.minorticks_on() and changing the range of x to x = np.arange ( 0 , 361 , 50 , dtype = int ) ....
+You can control the ratio of the height / width with ` ax.set_aspect ( number )` .
+What about plt.title ?
+Is there a way to darken or make smoother the HSV colours so they look more like this
+plt.plot ( arr [ ' lapse_time '] , arr [ ' contact_angle '])
+We are looking for some ` .line ` objects and there are two .
+My ` rcParams ` are not read .
+Now , it says ` get_data ` is not defined ... after I move ` my_plot ` before the loop
+Xaxis interval y1 ( y2 ) ax2 : ( - 100000.0 , 800000.0 ) ( wrong )
+Then define a method ` show() ` that calls ` plt.show() ` .
+` plt.setp ( plt.gca() , ' yticklabels ' , ylabels )`
+matplotlib.get_backend() MacOSX
+# matplotlib.use ( ' tkagg ') ;
+From the ` savefig() ` docs , #CODE
+You might also want to look into [ ` numpy.vectorize `] ( #URL ) .
+' and ' plt.figure() ; for result in results : plt.clf() ...
+Python , matplotlib pyplot show() not blocking
+According to the docs ` numpy.loadtxt ` is
+What is ravel() ?
+` plot() ` in ` pandas ` are build on ` matplotlib ` .
+` plt.colorbar() ` ?
+from matplotlib.ticker import LinearLocator , FormatStrFormatter
+Is matplotlib.pyplot.hist() what you are looking for ?
+File " / usr / lib / python2.7 / dist-packages / pandas / core / generic.py " , line 2018 , in astype
+Perhaps you should be calling ` axvline ` on ` ax2 ` instead of calling the ` pyplot ` method ?
+( ` np.all ( np.diff ( lats , axis=0 ) > 0 ))` , similar fro ` lons `)
+The problem is ' cause my np.mgrid should vary from -1 to 1 and have the self.width and self.height .
+awesome . and thanks for the np.transpose tip , too .
+And using ` set_bad ` , ` set_under ` and ` set_over ` is not a very good option as I would like to have a possibility to mark different pixels with different colours , and this limits their number to 3 .
+@USER numpy's ` memmap ` will probably not be useful for you .
+How about using ` interpolate() ` : #CODE
+cb.ax.set_major_formatter ( ticker.FuncFormatter ( myfmt ))
+special method ` __call__() ` is a good approach for such
+` plt.tight_layout() ` might do it .
+Unfortunately , I don't think you can simply do np.minimum ( array1 , array2 , array3 ) like to have above , so I think you need to nest the np.minimum calls .
+Using ` set_offsets ` doesn't seem to behave as I expect it to .
+Does the import of Axes3D do something behind the scenes to alter the import of pyplot ?
+` get_color() ` just returns the color attribute from a line .
+plt.tight_layout() `
+( Now I see : ` linspace ` is even mentioned in ` arange `' s docstring ... )
+By default ` animation.MovieWriter ` uses a ` subprocess.PIPE ` to feed the frames to the writer .
+With your ` matplotlibrc ` file , the variables ` mp.rcParams [ ' lines.linestyle ']` and ` mp.rcParams [ ' axes.grid ']` are correctly specified and this works as expected ...
+pyplot interface
+( and ` set_yticklabels ` for the y-axis )

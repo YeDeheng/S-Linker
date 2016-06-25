@@ -1,7 +1,9 @@
-import sys
+import sys, os
 import MySQLdb
 
-# simple conll to txt conversion 
+
+BASE_DIR = os.path.dirname( os.path.abspath(__file__) )
+# simple conll to txt conversion
 # Usage: python eval.py in.conll out.txt out.ann
 def conlltotext():
 	f = open(sys.argv[1], 'r')
@@ -23,8 +25,11 @@ def conlltotext():
 
 
 # given a stack overflow sentence, retrieve the question title
+# input is a text file containing sentences, output is title for each
+# usage: python eval.py sentences.txt titles.txt
 def gettitle():
-	f1 = open('all.tk', 'r')
+	#f1 = open(os.path.join(BASE_DIR, 'all.tk'), 'r')
+	f1 = open('mpl_split.txt', 'r')
 	all_sent = []
 
 	title_idx = [0]
@@ -35,17 +40,18 @@ def gettitle():
 		all_sent.append(line)
 	f1.close()
 
-	print title_idx[1]
-	print len(all_sent)
-	
+	#print title_idx[1]
+	#print len(all_sent)
+
 	title = []
-	f2 = open('sel.txt', 'r')
+	f2 = open(sys.argv[1], 'r')
 	for line in f2:
 		line = line.strip()
 		#print line
 		if line in all_sent:
 			idx = all_sent.index(line)
 		else:
+			print line
 			raise Exception('line not in all_sent!')
 		#print "idx is : ", idx
 		for i in title_idx:
@@ -58,8 +64,11 @@ def gettitle():
 				#print 'i is: ', i, 'i index is: ', title_idx.index(i)
 				title.append( all_sent[ title_idx[title_idx.index(i)-1] ] )
 				break
+	with open(sys.argv[2], "w") as f:
+		for i in title:
+			f.write(i + '\n')
 
-	return title
+    #return title
 
 
 # input a title, get the question ID
@@ -79,5 +88,5 @@ def getid():
 
 
 if __name__ == "__main__":
-	print getid()
-	#conlltotext()
+	#gettitle()
+	getid()

@@ -8,3 +8,1441 @@ But because all of the functionality relies on the hook , when the canvas is fin
 Notice ` xytext = ( 0 , 0 )` means no offset , and omitting ` arrowprops ` causes ` plt.annotate ` to not draw an arrow . 
 I tried adding ` / Library / TeX / Root / bin / universal-darwin ` to the Global Python Path of the Project Properties , but I still get the same errors . 
 My Python Path is correct C :\ Python27_32bit\ and I also have \lib\ site-packages \ and \DLL included correctly . 
+Adding Python Path on Windows 7 
+Append ` ; C :\ python27\Scripts ` to the end of ` Path ` variable 
+I use a palette file that I'm able to create using GIMP + Sample a Gradient Along a Path . 
+Spine position is specified by a 2 tuple of ( position type , amount ) . 
+Annotation along a curve in matplotlib 
+Heat Map Annotation with text 
+Annotation on top of the bars show the actual percentage of that category . 
+Text File . 
+I'm using Ubuntu and Sublime Text . 
+Check this page : Text Rendering with LaTeX . 
+When using Matplotlib ( Pylab ) for rendering Text with the same metrics as AriaL ( e.g. , Arial itself or Liberation Sans ) output looks ok - e.g. , the width of the legend box is right . 
+Text box with line wrapping in matplotlib ? 
+Python / Matplotlib - Quickly Updating Text on Axes 
+Text display problem with matplotlib ? 
+Network from Table ( Text / MS Excel ) .. 
+Text alignment in a Matplotlib legend 
+Underlining Text in Python / Matplotlib 
+( Text colour comes out as black ) #CODE 
+However , when I paste this code into my Wordpress page ( using the Text editor , not the visual editor ) nothing happens . 
+This generates the plot but the Legend B is placed at the upper right hand side corner and Legend A is by default placed at the left hand upper corner . 
+Multiple Pie Charts with a Shared Legend 
+You can add a legend to only the first axes after plotting all of your pie charts : #CODE 
+Matplotlib : Legend not displayed properly 
+Legend colors in Matplotlib table function ? 
+Legend transparency , when using secondary axis 
+Legend is outside the frame . 
+Button 1 : Shows the pointscores of John and Daniel in level 1 . 
+How to get multiple Button Click Events in Python 
+Button click -> ser.write , ser.read , draw 
+Another solution is print a ' Cursor ' or marker line on the plot , and change its coordinates with the mouse events . 
+An Arrow would appear with data about the invisible line one , but he wanted info about line two . 
+Arrow on a line plot with matplotlib 
+Drawing Arrow in ( x , y ) coordinate in Python 
+To be more specific , if you look at the answer to that question it shows how to make a 3D Arrow and use that to annotate points in a 3D plot -- I have used this recipe extensively and it makes me wonder how it isn't built into matplotlib yet . 
+Node positions are generated , stored and assigned like this #CODE 
+Node and edge attribute files are simply formatted : a node attribute file begins with the name of the attribute on the first line ( note that it cannot contain spaces ) . 
+Normalize the input data and scale it 
+Normalize your data . 
+Normalize again 
+Normalize your data , apply the colormap , save the image . matplotlib provides all the necessary functionality : #CODE 
+Normalize histogram2d by bin area 
+Python / Matplotlib - Figure Borders in wxPython 
+gcf() means Get Current Figure 
+Figure title with several colors in matplotlib 
+However , the sample consists of distinct solutions which form lines in the parameter space such that putting everything into a matrix and using ` imshow ` is not desirable because of the pixelation artefacts ( Figure 1 ) . 
+See Figure 2 . 
+Labeling Figure from String List 
+I was able to maximize Figure windows for TkAgg , QT4Agg , and wxAgg using the following lines : #CODE 
+I want to draw a quadratic Figure . 
+So I guess I have to built each button separately , and don't know how to " order " them in the buttons_frame 2 ) I am working within a for loop , so I can't use a " main " specifically for this . and 3 ) the Figure to plot is already created before entering the GUI . 
+But I wonder if there is a way to do the same link ( when zooming on figure 1 , I get the same zoom on figure 2 on one particular axis ) when defining 2 different Figures ( I want those graph to appear far from each other so I guess that I can't put them in the same Figure ... ) 
+I removed the reference to Figure 0 and had it generate a new figure each time . 
+Right now , that it the best I can do , see Figure . 
+Sounds like you just want an image in the Figure , right ? 
+You should perhaps try some converter that can produce DXF from EPS , PDF , SVG ... 
+For example see this converter in java : 
+You already have one such converter in your ` np.loadtxt ` method call . 
+You can achieve this by defining a converter that converts sting representations of dates to ` datenums ` . 
+Matplotlib Plot Lines Above Each Bar 
+Matplotlib.pyplot Bar Plot Grouping Subplots 
+How to properly give Annotations to Pandas Bar Charts ? 
+Pandas , Bar Chart Settings Customization 
+Two Bar Plots- Non side by side 
+I have a couple of problems with the Bar Chart that I'm trying to create in python . 
+I have a simple graph with a Navigation Tool Bar . 
+Matplotlib Subplot Animation with Basemap 
+Basic Animation with matplotlib's pyplot 
+How Can I Save Animation.Artist animation ? 
+Animation with contours matplotlib 
+I found the solution ( set 2 ) that uses the mpl Toolkit and AA to allow sharing of the X Axis and present more than 2 scales . by changing the code to allow for set 2 is where I noticed problems . 
+The side scales almost look good ( exception is repeats on the right ) and I CANNOT CHANGE FONT size of the X-Axis labels and Y Axis labels . 
+Reverse Z Axis on matplotlib 3D Plot 
+You have an example of the broken axis in the matplotlib examples : Broken Axis 
+Axis scale with bins 
+Converting Integer ( Day Count ) X Axis to Months 
+3d Polygon Plot in matplotlib baselines slanted 
+I am trying to create my own version of the 3D Polygon plot as shown on the Matplotlib web site : 
+I'm trying to make a polar chart with matplotlib and python 2.7 , but I'm struggling on how to increase the space between the X-Axis and the Tick Labels for that same axis . 
+Tick labels on x-axis aren't symmetric ( Matplotlib ) 
+Tick label displayed when clicking on graph ? 
+Axes missing when plotting in matplotlib using vispy as backend 
+In theory , this code doesn't change any coordinates ; it just gets the coordinates of each label , maps it to Axes coordinates using the Text object's internally-stored transform , and then sets the position . 
+@USER I think he wants to get the tick positions in Axes coordinates . 
+Axes fonts with text.usetex ' true ' does not use set font 
+Also , when specifying where you want the subplot to be placed ( the third input to ` Figure.add_subplot() `) , you do not want to use ` y+1 ` because that would start at ` 1 ` and end at ` 6 ` which would go out of the available range of 0-5 . 
+While it might be possible to hack ` JointGrid ` to get this to work , I suspect it will very likely be easier to just use ` kdeplot ` on one Axes , using ` twinx ` and ` twiny to place and scale the marginal plots properly . 
+I want to transform those intensity values to pixel intensity values as in the following image : 
+The longer the time period becomes , the sharper the peaks will become ( the Fourier transform of the cosines ): #CODE 
+How to transform your data into this format is a simple question , maybe a bit googling and trial and error . 
+Perhaps it is best to transform to linear coordinates and calculate how to produce the curved grid for the declination and the radial lines for the right ascension . 
+Since my data is roughly spherical I triangulate the azimuth and zenith angles from the spherical coordinate transform of my data points . 
+A workaround might be to log10 transform the data before plotting , but the approaches I have tried , #CODE 
+Without having to transform everything to string or another kind of object ? 
+However , the dates mysteriously transform themselves to an ugly and unreadable format when plotting the same data as a bar plot . 
+I want to find out how to transform magnitude value of accelerometer to frequency domain . 
+Then , you need to set the transform for the new lines on ` a_all ` to move them to the new axis . 
+What about applying a rectangular ( ok , in three dimensions , cubic ) window to your field before fourier transform ? 
+The canvas seems to get locked and after the call of the pick event I can not use the other functionalities as well . 
+When it is triggered it seems that the canvas gets locked and I can not use any other functionality . 
+I am trying to draw an arrow on the scatterplot . 
+Are these parametric orbits , so that you could draw vertical lines for each time ( or whatever ) _t_ ? 
+I've follow this subject : How to draw planes from a set of linear equations in Python ? 
+I am able to draw with all variables at x-axis if convert it to bar graph . 
+But in my particular case I have to draw Line2D instances using Points coordinates on top of the regular plots that are all using Data coordinates . 
+I'm using imshow() to draw a 2D numpy array , so for example : #CODE 
+I need to draw all function in the same window 
+I want to draw a small red box around one of the ticklabels , as so : 
+I draw 4D plot . 
+I'd like to draw / plot an horizontal line on top of the heatmap like in this figure 
+How do I draw edge labels for MultiGraph in NetworkX ? 
+How to draw a contour plot using Python ? 
+I tried to draw a contour plot using Python . 
+The second option is a touch more verbose , but has the advantage that the y-axis limits on the second plot will autoscale as you'd expect . 
+I included the code to autoscale the viewport , but that's not strictly necessary . 
+possible duplicate of [ How to autoscale y axis in matplotlib ? ] ( #URL ) 
+if the image is a NxM array of any type , it is interpreted through the colormap ( autoscale , if not indicated otherwise ) . 
+Now I changed my mind and decide to autoscale the data ( and the view ) , expecting these limits : 
+I would like to be able to autoscale a matplotlib figure to make arbitrarily placed text annotations visible . 
+I have to refresh the page to get the tooltips back . 
+will refresh your system's reference to the bash_profile and you should be good to go in importing and using matplotlib 
+Id like the user to be able to update an existing and open axis i.e. to refresh the axis . 
+Placing Custom Images in a Plot Window -- as custom data markers or to annotate those markers 
+How to annotate / highlight a 3d plot in MatPlotLib 
+Well , it takes a loop to annotate all data points , I thought that there should be a function that does just that . 
+You can annotate a specific point in the image using ` plt.text ( x , y , str )` . 
+To state it in a general form , I'm looking for a way to join several points with a gradient color line using matplotlib , and I'm not finding it anywhere . 
+Now instead of straight arrows , I want to join points by curve arrows . 
+If you like , join circos's google group to discuss : #URL 
+Then join me in upvoting that answer and that comment :-) 
+Because there have been closest points but when we join them they lead to an intersections or points which are not so close but should be joined together 
+@USER Because Python automatically join two adjacent strings into one string . 
+This produces a figure like the first figure at How to join overlapping circles ? 
+Matplotlib has lots of pre-defined colormaps for you to use . 
+Here are all of the predefined colormaps . 
+For me the simplest way is plotting directly the masks with imshow , passing different colormaps . 
+There is a list of colormaps to choose from here . 
+There is also a way to define custom colormaps . 
+The list of available colormaps by default is here . 
+You can add your own colormaps to ` _cm.py ` in your mpl directory and then change your rc file . 
+How can I tell append_axes that I want to append the y subplot to the right of the " main axes " containing the scatter plot ? 
+I got a boxplot graph like this : 
+add boxplot to other graph in python 
+but when I do it on the ' link ' series I can draw the boxplot correctly . 
+and I am able to draw the boxplot . 
+Or , more generally , modify / transform to you heart's content , and then boxplot . 
+If the ticklabels are already set to a string as in e.g. a boxplot , this is still working . 
+How do I add inset axes and zoom in on the first boxplot of the two ? 
+I'm not setting the position of each boxplot , so I don't know where they will appear exactly . 
+I wanted to add a box for each boxplot with a zoomed-in view on a specific y-axis range . 
+UserWarning : 2D hist input should be nsamples x nvariables ; 
+I'm doing a hist plot and I want some numbers shown in the plot , so I put in a text box using mathtext for the text , but I doesn't work and I can't see why . 
+This lead to my colorbar having sqrt ticks and I want to translate them back to the original values . 
+avoiding the local cache when fetching yahoo finance data from matplotlib.finance in python 
+I am fetching yahoo finance data in Python through this interface : 
+It would also be worth looking at the scatter plot documentation at #URL #CODE 
+I am using the following code to stitch a .png into a scatter plot from MATPLOTLIB . 
+Now I want to create a scatter plot with the data above .. 
+matplotlib : Understanding and changing axis labels for a scatter plot updated incrementally 
+I have a script that generates scatter plots for data being generated by a hardware device . 
+I build a scatter plot using matplotlib and python2.7 
+Build a scatter plot for baz based on the x-axis ( foo ) and y-axis ( bar ) 
+It is a normal scatter plot . 
+Value Error with color array when slicing values for scatter plot 
+I want to specify the frequency of markers that are printed in my scatter plot . 
+Regression line and fitted curve for scatter plots in matplotlib 
+but ` from matplotlib.path import Path ` throws #CODE 
+The Path object does not store the points along a Bezier curve , just the minimum parameters it needs . 
+Users of Path objects should not access the vertices and codes arrays 
+The trick is to use Path and PathPatch . 
+This allows you to get the Matplotlib Path vertices and codes in the projection coordinates which you can then convert into a new Path . 
+I was playing with PathCollection ( my dyslexia is killing me switching between Path and Patch ) , and if I can get a unit circle drawn and I can apply an affine transformation to it , then I think it should work , as it doesn't seem to inherently fill the space . 
+Thus the ` Spine ` objects are in question 
+You can use the ` set_position() ` method of the ` Spine ` class : #CODE 
+You mentioned the use of ` Locator ` and ` Formatter ` objects in your comment . 
+You need to call remove on the instance of the ` Annotation ` object . 
+Using Annotation Instead of Ticklabels 
+What is the difference between a Text instance and string in python ? 
+I believe the anti-aliasing of Text objects is up to the font engine being used . 
+What you should do is save a reference to the first ` Text ` object and update its contents by calling its ` set_text() ` method . 
+There is a references to the Text object returned by the original setting of suptitle in figure.texts . 
+I'm having a problem with the Text object that matplotlib use to represent the ticklabels . 
+I think you need to displace the ` Text ` object , using the ` set_position (( x , y ))` method . 
+This includes ` Text ` objects , ` Line2D ` objects , ` collection ` objects , ` Patch ` objects ... 
+Text object in matplotlib doesnt respond to zooming properly 
+After drawing a matplotlib Text instance and then interactively panning , the resulting drawn text is clipped to the data window but not the surrounding bounding box . 
+Something like ` Text ( 2 , 0 , u'Text ( 2 , 0 , u " Text ( 0.4 , u\ ' 0.4 \ ')")')` . 
+` plt.legend ` returns a ` Legend ` object with methods that allow you to modify the appearance of the legend . 
+So first we'll save the ` Legend ` object : #CODE 
+In practice I seem to end up mixing them both myself in SW ; it's largely a matter of taste whether you go through the pyplot API or access the objects . pyplot is certainly very convenient although as you want to do more complex / exotic things you'll find what you can do with pyplot alone limited and you'll need to get to know at least the full API's Axes , Figure , Legend and Path objects better . 
+There was a refactor of the ` Legend ` class awhile back . 
+call ` Legend.get_texts() ` will get a list of Text object in the legend object : #CODE 
+Some parameters could easily be read from the ` Legend ` object , others ( like ` title ` , ` fancybox `) required some ' artistics ' . 
+42 from matplotlib.legend import Legend 
+How do I choose the optimum width for a matplotlib Button ? 
+I removed ` color=axcolor ` from the ` Button ` call ; and I added a ` plt.show() ` before the event connect , otherwise a figure window didn't appear for me ( neither through ` ipython ` , nor with ` python `) . 
+button = Button ( ax=reset_axis , label= ' Reset ' , color= ' lightblue ' , hovercolor= ' 0.975 ') 
+` tbar.add_button ( a Button object ); ` 
+For your buttons to work , you need to keep a reference to the ` Button ` object around . 
+I know how to add and work with single cursor ` self.cursor = Cursor ( self.static_canvas.Dataplot , useblit=True , color= ' red ' , linewidth=2 )` , but what I should do to create to cursors ? 
+I think tillsten is right -- study how the [ ` Cursor ` class ] ( #URL ) does it . 
+I've checked briefly , but I don't know how to modify the properties of an ` Arc ` instance , although I'm sure it's possible . 
+You could also try passing a ` Arrow ` instance as marker , but I'm not sure whether that works . 
+Currently , I don't think it possible as the ` Arrow ` class only supports `' solid ' | ' dashed ' | ' dashdot ' | ' dotted '` four different linestyles . 
+The Node class has the coordinates stored as members ( x and y ) , as well as index . 
+You can scale your z values to fit this range with Normalize . 
+You should mention the ` Normalize ` methods here as well . 
+Matplotlib provides the class ` Normalize ` for that : #CODE 
+Create a new instance of ` Normalize ` for each image you want to process . 
+And then you can also replicate the functionality of ` Normalize ` ( since you seem to not like it ): #CODE 
+Use these to create a ` Normalize ` instance ( other normalisation classes are available , e.g. log scale ) . 
+The documentation of Normalize might be a bit deceiving here : ` process_value ` is a function which is only used for preprocessing ( and static ) . 
+I have several questions regarding the Normalize class in Matplotlib . 
+with your own ` Normalize ` function . 
+This might be why they've avoided implementing it as part of Normalize . 
+matplotlib : can I create AxesSubplot objects , then add them to a Figure instance ? 
+Also do you use Figure from the local matplotlib installation or not ? 
+Additionally , there are functions from the pyplot interface and there are methods on the ` Figure ` class . 
+I'll assume in the following that ` fig ` is an instance of a ` Figure ` : 
+Both the Figure and the Axes class have a ` clear() ` method . 
+I had this same problem , and it was caused by calling ` show() ` on the Figure object instead of the pyplot object . 
+It got wrapped up in a subclass of Figure , which also got level-of-detail functionality and context menus . 
+I have an external function which returns a Figure object , and in this situation , each Figure object is composed of exactly one Axes object . 
+While a search did lead me to see that pyplot.figure() is the development team's recommended instantiation technique , it doesn't change the question : is there any way to do Axes / Figure copy construction and Figure construction via composition of copied Axes ? 
+A reference to it isn't stored in the ` Figure ` object , but is stored in the ` Canvas ` object so you can destroy a window via #CODE 
+Removing the ` frameon=False ` option from ` f = Figure ( figsize =( 12 , 5 ) , dpi=100 , frameon=False )` solved the issue . 
+I used the Bar class to plot length of videos vs views which are the x and y values of the tuples . 
+Animation will not work on inplace ( or inline ? ) on notebook . 
+By artifacts , I now understand to mean you are creating a second ` Animation ` object and what you get is both of them running in parallel ( which I am not sure what I expect to happen there ) . 
+by ` ax ` I mean the current ` Axis ` object , which you were getting at via ` gca ` . 
+Your legend command is using the markers , not the lines as inputs by using ` plot [ 0 ]` . 
+` Axes ` objects know about things like tick location and labels and the display range ( which it does by knowing about ` Axis ` object , but that is getting even more into the weeds ) . 
+Use Axis method ` set_xscale ` or ` set_yscale ` . 
+` ax.set_xticks() ` is a method of the ` Axes ` object , whilst ` matplotlib.ticker.FixedLocator ` is an object which is used with the ` Axis ` object ( ` Axes ` is basically the whole graph , whilst ` Axis ` is just one of the ( two ) axis ( x or y ) . 
+This is not particularly well documented , but ` Polygon ` objects have a pair of methods ` get_xy ` and ` set_xy ` . 
+In particular , if / when there are so many circles for the figure to become connected , the ` for polygon in polygons : ` fails with a ` TypeError : ' Polygon ' object is not iterable ` . 
+Just use the ` Polygon ` or ` Rectangle ` classes : #CODE 
+As you can see , the edge is center-positioned along the border of the domain of the Rectangle object , and so bleeds into this domain . 
+You can do this by overplotting a Rectangle patch on the cell that you would want to highlight . 
+Currently I use the ` add_patch ( Rectangle ( ... ))` , but it does not fit really well . 
+Unfortunately it seems that the ' Rectangle ' object has no attribute ' set_bottom ' . 
+You can acces ALL the properties of a ` Tick ` object using this approach : #CODE 
+Fortunately you can update figures you've moved to where you want them pretty easily , by using the object interface specifically , and updating the Axes object without creating a new figure . 
+( You can also always find this data inside the ` Axes ` object if you know where to look . ) 
+By deferring the expense of drawing you can greatly improve the performance of functions that make many calls to ` Figure ` and ` Axes ` methods . 
+` Figure.add_subplot() ` returns an ` Axes ` instance , and ` pyplot.subplots() ` returns an ` Axis ` object as second output parameter . 
+As a side note , it is better to pass ` Axes ` objects into your function than create them ( implicitly ) internally . 
+Here , what you have done is capture the ` Axes ` instance that is returned from ` add_subplot() ` . 
+If I create an ` Axes ` object in ` matplotlib ` and mutate it ( i.e. by plotting some data ) and then I call a function without passing my ` Axes ` object to that function then that function can still mutate my ` Axes ` . 
+Pass multiple matplotlib Axes objects from generator function and display them 
+The ` transform ` in this case is a ` BboxTransformTo ` object , which : 
+You can use the ` transform ` keyword : #CODE 
+But when I checked the source code of draw_networkx_nodes draw_networkx , I realized that it is not a straight forward task as the draw function stores the positions ( nodes and edges ) in a numpy array , send it to the ax.scatter function of matplotlib ( sourcecode ) which is a bit hard to manipulate without messing something up . 
+This simply calls the draw method of the figure periodically . 
+Then I just added a signal to the custom version and overrode the draw method . 
+EDIT : I'm super blind , sorry for that , you're calling the draw method , however it is a good idea to add * args and ** kwargs to any overriden methods .. try that , and perhaps call FancyBboxPatch.draw at the end of overriden method 
+I'm also panning and zooming into this figure , and have been using the draw method to show the new perspectives from zooming in ( using set_xlim and set_ylim ) and from panning ( drag_pan and start_pan ) . 
+I would use ` ax.autoscale ( enable=False )` before your call to ` scatter ` . 
+You can perhaps loop into your ` AxesSubplot ` objects and call ` autoscale ` passing the ` axis ` parameter : #CODE 
+@USER - If you'd like to rescale the axes , call ` ax.autoscale() ` every time you remove a point . 
+Python : Add x-y margins automatically with autoscale ( pyplot ) 
+Ahh , it's the call to ` autoscale ` that I'm missing . 
+The trick is at the end , in the custom refresh method ! 
+For what you're wanting to do , you'd be far better off using annotate . 
+It's quite simple to do manually with ` annotate ` . 
+If you're wanting to adjust vertical alignment , horizontal alignment , etc , just add those as arguments to ` annotate ` ( e.g. ` horizontalalignment= ' right '` or equivalently ` ha= ' right '`) 
+It's quite simple to do manually with ` annotate ` . 
+You can use the annotate command to place text annotations at any x and y values you want . 
++1 Just as a side note , annotate has " offseting the annotations a little " built-in . 
+While there's nothing wrong with Ofri's answer , ` annotate ` is intended especially for this purpose : #CODE 
+Just use ` annotate ` and specify axis coordinates . 
+It is also possible to make an arrow with text , using the annotate method . 
+The closest thing I have been able to find while searching here is the annotate command , but that appears to create a fixed label on the plot . 
+` plt.annotate ( ' Something ' , ( 0 , 0 ) , ( 0 , -20 ) , xycoords= ' axes fraction ' , textcoords= ' offset points ' , va= ' top ')` 
+@USER I'm not sure why we have to explicitly call ` draw ` . 
+The ` boxplot ` function only plots quartiles ( 0 , 25 , 50 , 75 , 100 ) . 
+Is there any way I can extract these values for use in my downstream code from the boxplot object ? 
+I am plotting a non-normal distribution using boxplot and interested in finding out about outliers using boxplot function of matplotlib . 
+You should use the ` hist ` function . 
+An similar example of such plot is " hist ( x , orientation= ' horizontal ')" . 
+I need to use the ` hist ` function , I have looked elsewhere on this site but I haven't found anything . 
+I tried doing hist ( x / x.sum() ) but that reduce the values of the numbers in the x axis and does not change their frequency , so the y-axis is unchanged 
+How can I prevent the labels of ` xticks ` from overlapping with the labels of ` yticks ` when using ` hist ` ( or other plotting commands ) in matplotlib ? 
+An easy way to do this is to add ` 0j ` to the argument of the ` sqrt ` , like this , ` sqrt ( 1+0j- ( 1 / x ) **2 )` . 
+You need to set the new coordinates of the datapoints in the internal ` _ofsets3d ` variable of the ` Line3DCollection ` object returned by the ` scatter ` function . 
+You can use ` scatter ` for this , but that requires having numerical values for your ` key1 ` , and you won't have a legend , as you noticed . 
+The ` scatter ` and ` hist ` commands really expect ` x ` and ` y ` to be 1D arrays . 
+I'm wondering if it is possible to have individual alpha values for each point to be plotted using the scatter function of Matplotlib . 
+The problem happens when I call the scatter function . 
+Why do you say that reusing plt.figure will lead to memory issues ? 
+I am using matplotlib.pyplot to create histograms . 
+I corrected this using the ` set_position ` command . 
+` np.asarray ( Image.fromarray ( image.astype ( ' uint8 ') *255 ) .convert ( ' L ')) .astype ( float ) / 255 ` 
+python : ImportError : No module named patheffects 
+import matplotlib.patheffects 
+` plt.bar ( left , height , width= 0.8 , bottom=None , hold=None , ** kwargs )` 
+I typically have them in the ax.plot line . 
+my attempt to define the aspect ratio for both ` y ` -axis while using ` twinx ` ( which does not work ) 
+For each of this point , I can calculate the value of my unordered categorical variable X . 
+You can achieve it using the ` ScalarFormatter ` : #CODE 
+@USER how is hexbin useful here ? 
+Hmm , doesn't look like there is anything obvious is rcParams or the matplotlibrc file . 
+What you're doing is aliasing ( " renaming ") matplotlib.font_manager to FontProperties so calling fontP = FontProperties() is actually calling matplotlib.font_manager which is not callable . 
+I think changing the arrowstyle will help here . 
+plt.plot ( x , z ) 
+` plt.tight_layout ( pad= 2.0 , h_pad= 6.5 , w_pad= 4.5 )` gives the desired result ( Fig.3 ) . 
+Should work without the line ` X , Y = np.meshgrid ( X , Y )` . 
+O1 = np.array ( new_OI ) 
+There's no need for a vector representation of each pixel , and ` imshow ` will be much faster . 
+So definitely not in an equidistant meshgrid . 
+Inserted after pyplot.savefig() and the problem seems to be solved . 
+` numpy.polyfit ( x , y , deg , rcond=None , full=False , w=None , cov=False )` 
+Simply putting in : ` bbox =d ict ( facecolor= ' blue ' , alpha= 0.5 )` in the ax.text statement changes the color . 
+ax.set_xticks ([ " 1975-01-01 " , " 1980-01-01 " , " 1985-01-01 " , " 1990-01-01 " , " 1995-01-01 " , 
+Also , don't mix ` pyplot ` with guis ( unless you are explicitly using a non-interactive backend ) . 
+FuncAnimation 
+` x2 ' = -mu / np.sqrt ( x ** 2 + y ** 2 + z ** 2 ) * x ` , 
+matplotlib.pyplot.stem ( *args , ** kwargs ) 
+I've confirmed that this works for ` plot() ` as well as ` imshow() ` . 
+PCA ( X ) is not the same thing as PCA ( X.T ) .T 
+I should have used OffsetImage and AnnotationBbox . 
+Using GridSpec 
+Try removing that argument from your call to ` streamplot ` . 
+Try `` ax.text ( 0 , 0 , ' whatever ')`` . 
+matplotlib tripcolor - removing edges 
+` ax.xaxis.get_children() [ 1 ] .set_size ( 15 )` 
+I have tried lots of different combinations of the ax.plot() part , but if I change it to : #CODE 
+but i want to keep the ytick marks only on the left hand side . thank you . 
+fig is defined as : ` fig = plt.figure() ` 
+We used the same method , but I somehow missed ` set_markeredgewidth ` . 
+---> 29 import matplotlib.colorbar 
+ax.plot ( r.date , r.close ) 
+plt.plot() 
+The ` .format ` form is the preferred way to do string formatting now as opposed to the ` % ` operator . 
+` GridSpec ` works for me ( ` matplotlib ` v1.5.0 in case it matters ): #CODE 
+A search of the ` matplotlib.pyplot ` API documentation does not reveal anything , so I'm afraid you'll have to live with using ` matplotlib.patches.Ellipse ` 
+for why ` LinearSegmentedColormap ` shows strange color , I think this link would be helpful . 
+I did so both in the Windows shell and emacs shell and the same PYTHONPATH is used . doing the rcParams both return TkAgg . 
+However , the savefig() output is too zoomed out , too general . 
+plt.imshow ( Xt [ 0 , :] .reshape ( 105,105 ) .T , interpolation= ' nearest ' , cmap= cm.Greys_r ) and it gives me the correct flipped output . 
+See [ ` matplotlib.pyplot.contourf `] ( #URL ) for example . 
+Why pyplot ( matplotlib ) is joining points randomly ? 
+x = np.array ([ 1 , 3 , 4 ]) , ([ 1 , 2 ]) 
+` np.arange ` doc 
+plt.colorbar ( cs ) 
+` tick_params ` should do it . 
+I have experiemented with turning interactivity on and off via ` plt.ioff() ` , but to no avail . 
+don't do ` plt.xticks ... 
+thx ! but in the end this worked : ` ax [ 1 ] .bar ( bins [: -1 ] , 1 . *hist / N , np.diff ( bins ) , log=True )` 
+For example ` griddata ` , ` Rbf ` , ... 
+It sounds like you would rather have an ` axhspan ` or ` axvspan ` . 
+matplotlib : plt.isinteractive() returns 0 instead of True or False after plt.ion() is called , when the script is being run in a terminal ? 
+matplotlib FuncAnimation input 
+@USER Do I need to pass anything additional to ` ColorbarBase() ` ? 
+In some other code , I used the OpenCV ` SaveImage ` on a single frame to provide a reference for what I would expect from ` imshow ` . 
+AxesSubplot has no attribute hist2d - Matplotlib 
+fig = plt.figure() 
+customize ticks for AxesImage ? 
+In addition , " changing plt.figure ( i )" is not correct . 
+I tried it out . linecollection does not appear to work in 3D . 
+You can verify it by calling ` plt.xlim() ` both before and after the ` pandas.plot() ` call . 
+Did you try calling ` plt.show() ` ? 
+Edit : My original answer used ` ax.scatter ` . 
+The helper functions date2num() , num2date() and drange() are used to facilitate easy conversion to and from datetime and numeric ranges . 
+Here's an example of how you can display multiple plots side-by-side below a larger one using Gridspec : #CODE 
+I only just discovered the awesome that is ` matplotlib.mlab.psd() ` , but I am having one issue , that is : how can I change the frequency range used by the method ? 
+Python Matlplotlib errorbar : some errors disappear 
+@USER It says : font_manager attribute not found o_O . 
+Documentation of legacy ` subplot() ` is [ here ] ( #URL ) and ` subplots() ` is [ here ] ( #URL ) . 
+I am not completely sure if this is the kind of thing you're looking for , but ` legend() ` inside ` matplotlib.pyplot ` may be able to help you out . 
+Is the PCA stuff really relevant ? 
+Seaborns clustermap doesn't work with plt.tight_layout() . 
+fig = plt.figure ( **figprops ) . 
+From your remark that ` datetime ( 2009 , 10 , 7 , 0 ) .strftime ( ' %Hz%d%b ')` gave the right string I would've thought it worked . 
+yerr = np.array ([ ]) 
+ax = fig.add_subplot ( 111 ); 
+plt.subplots : 
+( It's not the edgecolor option in pcolormesh ) #CODE 
+` plt.xlabel ( u'Wavelength ( \u03bc m )')` 
+You may see that how ` .ix ` was used for selecting an interval . 
+I am running the tutorial for pylearn2 and I'm getting some errors when it imports ` matplotlib.pyplot ` . 
+then a call to ` fig.get_size_inches() ` gives ` [ 6 , 7.475 ]` . 
+I am experiencing the same problem as described in import matplotlib.pyplot hangs after updating my matplotlib version ` import matplotlib.pyplot as plt ` hangs while executing ` fc-list ` . 
+Using ` pcolor ` from matplotlib I am unable to do it because my pc goes easily out of memory ( more than 8G ) .. 
++ " plt.plot ([ " + d.x1 + " , " + d.x2 + "] , [ " + d.y1 + " , " + d.y2 + "] , ' k- ') \n " 
+I am trying to import Pylab using the ` import matplotlib.pyplot as plt ` . 
+The plt.subplots_adjust method : #CODE 
+for i , j in np.where ( significant ): print i , j 
+ax = fig.add_subplot ( 111 , projection= ' 3d ') 
+matplotlib.pyplot does savefig() but not show() in python3 but works in 2.7 
+In this case , pcolor and pcolormesh will produce the same result . 
+From the documentation of ` pyplot.errorbar() ` : 
+Tkinter and pyplot running out of memory 
+You've already created ` ax ` with ` plt.subplots ` so don't you just need to pass ` ax=ax ` to ` merged2.fcast.plot ` instead of setting ` ax= ... 
+You also should not import pylab , you should do ` import matplotlib.pyplot as plt ` 
+Alright I got it to work by using plt.minorticks_on() and changing the range of x to x = np.arange ( 0 , 361 , 50 , dtype = int ) .... 
+You can control the ratio of the height / width with ` ax.set_aspect ( number )` . 
+What about plt.title ? 
+Is there a way to darken or make smoother the HSV colours so they look more like this 
+plt.plot ( arr [ ' lapse_time '] , arr [ ' contact_angle ']) 
+We are looking for some ` .line ` objects and there are two . 
+My ` rcParams ` are not read . 
+Now , it says ` get_data ` is not defined ... after I move ` my_plot ` before the loop 
+Xaxis interval y1 ( y2 ) ax2 : ( - 100000.0 , 800000.0 ) ( wrong ) 
+Then define a method ` show() ` that calls ` plt.show() ` . 
+` plt.setp ( plt.gca() , ' yticklabels ' , ylabels )` 
+matplotlib.get_backend() MacOSX 
+# matplotlib.use ( ' tkagg ') ; 
+From the ` savefig() ` docs , #CODE 
+You might also want to look into [ ` numpy.vectorize `] ( #URL ) . 
+' and ' plt.figure() ; for result in results : plt.clf() ... 
+Python , matplotlib pyplot show() not blocking 
+According to the docs ` numpy.loadtxt ` is 
+What is ravel() ? 
+` plot() ` in ` pandas ` are build on ` matplotlib ` . 
+` plt.colorbar() ` ? 
+from matplotlib.ticker import LinearLocator , FormatStrFormatter 
+Is matplotlib.pyplot.hist() what you are looking for ? 
+File " / usr / lib / python2.7 / dist-packages / pandas / core / generic.py " , line 2018 , in astype 
+Perhaps you should be calling ` axvline ` on ` ax2 ` instead of calling the ` pyplot ` method ? 
+( ` np.all ( np.diff ( lats , axis=0 ) > 0 ))` , similar fro ` lons `) 
+The problem is ' cause my np.mgrid should vary from -1 to 1 and have the self.width and self.height . 
+awesome . and thanks for the np.transpose tip , too . 
+And using ` set_bad ` , ` set_under ` and ` set_over ` is not a very good option as I would like to have a possibility to mark different pixels with different colours , and this limits their number to 3 . 
+@USER numpy's ` memmap ` will probably not be useful for you . 
+How about using ` interpolate() ` : #CODE 
+cb.ax.set_major_formatter ( ticker.FuncFormatter ( myfmt )) 
+special method ` __call__() ` is a good approach for such 
+` plt.tight_layout() ` might do it . 
+Unfortunately , I don't think you can simply do np.minimum ( array1 , array2 , array3 ) like to have above , so I think you need to nest the np.minimum calls . 
+Using ` set_offsets ` doesn't seem to behave as I expect it to . 
+Does the import of Axes3D do something behind the scenes to alter the import of pyplot ? 
+` get_color() ` just returns the color attribute from a line . 
+plt.tight_layout() ` 
+( Now I see : ` linspace ` is even mentioned in ` arange `' s docstring ... ) 
+By default ` animation.MovieWriter ` uses a ` subprocess.PIPE ` to feed the frames to the writer . 
+With your ` matplotlibrc ` file , the variables ` mp.rcParams [ ' lines.linestyle ']` and ` mp.rcParams [ ' axes.grid ']` are correctly specified and this works as expected ... 
+pyplot interface 
+( and ` set_yticklabels ` for the y-axis ) 
+I haven't checked any of the details and you should therefore not rely on it to be correct . 
+You can access members and slices of the array as you would with normal numpy arrays . 
+Running 1000 simulations at the same time might be a bit expensive though . 
+I need to look at other formats that allow create . 
+finding element of numpy array that satisfies condition 
+All the results ( percentage ) are the comparison between the described condition and the reference which here is the packaged ATLAS library . 
+how do you use ` slicing ` to extract something from ` x ` ? 
+Mapping a numpy array pairwise 
+If that is all you want to do , it should just work otherwise look at #URL since subclassing an array is not that simple . 
+If you want to access an individual element using 2D notation , you can create a view and work with that . 
+Regarding 3 , I don't think this would be necessary since the above trick can also be applied to an array allocated by ` shmarray ` . 
+And here a list with the names of all distribution functions available in Scipy 0.12.0 ( VI ): #CODE 
+I get this error whenever i try to use any functions of matplotlib such as graph etc ... 
+Numpy is designed for repeated application of the exact same operation in parallel across an array . 
+Each B i is a ` k ` -by- ` n ` matrix . 
+I created a copy of the initial array in the hope that it would sort it out but it still doesn't work ! 
+So far , all the solutions I found required converting to IPLImage . 
+However , I haven't tested this very systematically , and it's likely that for smaller matrices the additional overhead would outweigh the performance benefit from a higher thread count . 
+but why dimA+dimB to begin with , that just leaves you 0s at the end . 
+If you select a list of actual fitness entries , ` indices ` , the corresponding points are given by ` A [ ' point '] [ indices ]` , which is a simple ` ( n , 3 )` array . 
+It's also possible to generate an array of indices without using ` enumerate ` . 
+If you want to keep the array allocated , and with the same size , you don't need to clear the elements . 
+It'll print out all methods and properties of the object . 
+Search numpy array inside numpy array 
+Assigning a view to a structured array also copies the data , soyour suggestion doesnt work . 
+If you know there are not many different values ( relative to the size of the input " itemArray ") , something like this could be efficient : #CODE 
+When I import numpy in a script , I don't have all the functions of numpy available , only few of them ( not a lot , and not array ) ? 
+It allows to have your custom system inside the home directory accessible via proot and , therefore , you can install any packages without root privileges . 
+Hey , is there an optimal size for a block ? 
+Numpy array , how to select indices satisfying multiple conditions ? 
+I'm still learning git and this whole open source thing . 
+A further problem is that a list index can't contain duplicates - I couldn't simultaneously read pixels ` [ 1 , 2 ]` and ` [ 1 , 3 ]` , since my list of pixel x-coordinates would contain ` [ 1 , 1 ]` . 
+Your interpretation is , of course , quite correct : ` count ` refers to the number of elements in the ` float* ` " array " . 
+This all works . 
+Of course it may _not_ be acceptable , but it seemed like it was at least trying . 
+I think what should happen is for R to be overwritten with an upper triangular matrix . 
+@USER Is there a way to get it to return all possible solutions ? 
+Thank you all for some great insight ! 
+as numpy array of 0 and 1 values . 
+By construction of the problem , there can not be any non-unique values lying within one another . 
+Both functions are kind of equal , but are different . 
+For a sparse csr matrix ( X ) and a list of indices to drop ( index_to_drop ): #CODE 
+This will be relatively slow , and requires you to have twice the free memory space required to store the array . 
+I need numpy for this because I don't want to loop through the array n-times for n groups , since my array sizes can be arbitrarily large . 
+I wonder what the speed delta between native Numpy arrays and an ` mpfr ` array , seeing as ` mpfr ` is a relatively low-level C wrapper class . 
+In this particular case , each 1D column ( ` column = myarray [ i , j , :] `) of the 3D array can be treated independently . 
+Any ideas ? 
+Then take element 3 and 1 from second row , etc . 
+print len ( index ) 
+I don't know how to label rows and columns in numpy , so I just made a dict mapping the row label to the row index and another doing the same for the columns . 
+It's the same as a normal solve except I know some of the solution to begin with . 
+yeah , this is the best answer anywhere where edge cases are important . 
+With this , I solve the problem ( may help you ): #CODE 
+Teach a man to fish and all that . 
+Looks like this would be a good place to use a context manager , so you can say " with fullprint " . 
+What do you mean by ' random sort ' ? 
+However , it indeed does not allow you to exponentiate any matrix directly : #CODE 
+The first one would probably be slow for large data , and the second one does not seem to offer any other interpolation method except splines . 
+EDIT : For the record , here is example code that demonstrates the issue : #CODE 
+In terms of functionality , it's not a metaclass at all , it's a function which takes a class ( along with some others stuff ) and returns a new class . 
+or from source #CODE 
+Didn't do any timings here , but it's possible this version has reasonable performance . 
+I'll just test whether or not there's a significan space gain on my data with protocol 2 . 
+Just wanted to add that the moving average function has been extracted into the [ Bottleneck ] ( #URL ) library if pandas seems too heavyweight as a dependency . 
+` numpy ` can use ` malloc ` / ` realloc ` for creating an array of objects of ` sizeof ( int )` . 
+If you read through the documentation of those engines you will often find statements saying that they are optimized for speed ( 30fps - 60fps ) . 
+I know I have to look at each row , but I don't want to do it with loops . 
+I'm hoping this can at least save someone a few hours of hopeless research for this topic . 
+What does " doesn't work " mean ? 
+You might look at your code that generates the ` y ` values , and see if that would benefit from the use of additional numpy or scipy functions . 
+For example , give the list [ ( .3 , ' a ') , ( .4 , ' b ') , ( .3 , ' c ')] I'd like to sample ' b ' 40% of the time . 
+The square bracket idea you mentioned works for my current problem . 
+However , when I try to use a weighted average #CODE 
+If I scale that to a 2000 X 2000 np array , here is what I get : #CODE 
+Unfortunately , I'm not aware of a numpy implementation , but I did find this : #URL 
+We can do this quite neatly using numpy , without having to worry about the channels at all ! 
+It's not exactly the most efficient way , but it will work , and not require keeping a copy of the file in memory ( or two ) . 
+I'm trying to find the fastest way to find the first non-zero value for each row of a two dimensional sorted array . 
+Convert the numpy array into a list first . 
+@USER do you mean that grid dictonary holds the results in memory or something else ? 
+@USER : This solution is indeed designed to give the set of all the numbers found in the array . 
+This way at most one line is in memory at any one time . 
+It's low efficiency , I want to know are there any builtin functions that can do this in NumPy . 
+The raw hardware data is 32-bit signed integer , which becomes float when I convert it to normal physics units ( m / s ) 
+Calculate subset of matrix multiplication 
+EDIT : as to what DSM pointed out , OP is infact using a numpy array . 
+As for the second question , ` delete ` has been suggested before : #CODE 
+The remaining rows of the matrices are all linear combinations ( in fact exact copies for almost all submatrices ) of these rows . 
+I'm printing the contents of an array with a header . 
+Edit : If you need to save memory try radix sort , which is much faster on integers than quicksort ( which I believe is what numpy uses ) . 
+The data was in following order ( with sample data ) #CODE 
+definitely a good solution , nevertheless I'd like to solve this without a range , but the nearest neighbour . 
+For my recent project that works on the order of 20000x20000 matrix entries , I will quickly and disastrously use up all of my workstation's 8GB of RAM and more . 
+Well , this might give a small speed-up just because it uses less memory . 
+Try using ` all ` ( edited to return ` int `) : #CODE 
+: I don't care if the statement modifies array or not . 
+Rather than doing nans I put in -1 and then filtered on match = b > = 0 . 
+Removing duplicate columns and rows from a NumPy 2D array 
+arrays to extract arrays of the same 
+as i have to test if it works or not so minimum i have to try with 10-15 different types of images . its not specific images it can be any image of people . 
+So having a python loop , and having to sum all the results together , is taking 390 ms more than 200 times what it takes to solve each of the 200 systems that have to be solved . 
+You could then sample pixels at the locations of the new points . 
+I could use an idea about either how to fix the compilation errors or another way to convert my python objects . 
+I tried every possible combination resulting with a 0 bytes file if the extension was mpg , and 5.5kb if it was avi . 
+Fortran 90 DOES support arbitrary lower bounds on arrays , and borrowing from that paradigm sounds quite plausible . 
+I want to perform an operation on a that increments all the values inside it that are less than 0 and leaves the rest alone . for example , if I had : #CODE 
+I like how this one uses straight python slicing and doesn't require numpy 
+I select the first value using ` ys [ 0 ]` . 
+While waiting for the next buffer to fill , I'd like to process the most recent buffer with numpy and save the result . 
+( They all do the same thing , in this case . ) 
+As of PIL 1.1.6 , the " proper " way to convert between images and numpy arrays is simply #CODE 
+So first you need to construct an array that represents the rows you wish to select . 
+Any ideas how to improve this ? 
+If this is the case , you can easily plot a known asymmetric shape and the plot will tell you everything . 
+Apart from the compression part , this shouldn't be any slower than normal . 
+Acquiring the Minimum array out of Multiple Arrays by order in Python 
+first copy #CODE 
+Getting all points where y=2 . 
+moving average function on numpy / scipy ? 
+for a N dimensional array : #CODE 
+From looking at #URL it seems that it was originally required because indexing with ` ... 
+In other words ... yes you can trust it to be faster ... but don't think python is that slow that you cannot do a for loop over 3 items without waiting for ages ... 
+And all that while you're getting lunch . 
+If you do want to raise some sort of exception for invalid data ( not type checking ) , either let an existing exception propagate , or wrap it in your own exception type . 
+casting are used in Numexpr , in contrast with NumPy , where array types 
+I check mathexchange and while making the tags for the post , it didn't have any the ones that would seem relevant like scipy and numpy or even sparse . 
+Any help would be appreciated . 
+Say not that efficiency is a secondary priority ; say instead that I want to perform bivariate optimization : pythonicity + efficiency ( hence the post title ) . 
+Does numpy have any constructs to make this easier ? 
+If you view ` P ` as a rank-2 tensor then only three options exist for the product of ` P ` with itself , 1 ) either all the indexes cancel leaving you with a rank-0 tensor ( a scalar ) , 2 ) 1 set of indexes cancels and you are left with a rank-2 tensor ( a matrix ) , or 3 ) none of them cancel and you're left with a rank-4 tensor . 
+At the moment I made a custom iterator class that builds a list of lists . 
+This basically sees whether two circles ( with coordinates that correspond to the indices n and m ) connect . 
+It would mean Gaussian quadrature using points along the line that are easily evaluated . 
+I see one potential problem - beta is defined as 1-dimensional , but its value is given as 2-dimensional ( dimensions of size 1 still count as dimensions ) 
+Can you provide an algorithm for computing them based on block size ? 
+If ` X ` is your array , #CODE 
+You could cast the array to a list : #CODE 
+But if you for example self compiled from the development version an update may fix most of it . 
+In VTK I am able to use the following snippet to save the render window as an image . 
+In other words , the 4th row in A_sorted was the 1st row in the original array , A , etc . 
+Add a ` return ` statement at the end of the method . 
+However , with different input sizes , using fft's to do a convolution can be considerably faster ( Though I can't seem to come up with a good example , at the moment ... ) . 
+That is a shallow copy ... 
+@USER The solutions there all make use of the fact that only a 3x3 sliding window is needed , but I need something that works for all sizes of templates . 
+A masked array is useful here : #CODE 
+Second I would like it to be easily expandable , that I can add new functions easily . 
+If i have two variables - where they either are a 1d array of values length n , or are a single value , how do i loop through them so that I get n values returned . 
+I think masked arrays have been in numpy for a few years now . 
+I have an array defined in this way ( extracting the third column of a dataset ): #CODE 
+I wasn't aware of the option of using ` data [ list ]` to select multiple columns . 
+Beware that if the type of the output array is 
+Any ideas how I would do this calculation in a simpler way ? 
+Those take up about 15MB of space which , considering that I get about 1000 result files in a series , is unacceptable to save . 
+I'm trying to implement a logic where I'm trying to subtract each element of an array from every other element of the array and then find the minimum difference of the result . 
+My final matrix should have 5416 rows with 500 000 column each . 
+I am attempting to process data saved to CSV that may have missing values in an unknown number of columns ( up to around 30 ) . 
+Actually the surprise is still hidden in a way , because in your examples ` a [ indices ]` is the same as ` a [ indices [ 0 ] , indicies [ 1 ]]` but ` a [ indicies , :] ` is ` a [( indicies [ 0 ] , indicies [ 1 ]) , :] ` which is not a big surprise that it is different . 
+Slice numpy array wth list of wanted rows 
+Here is a slightly more complex version that always returns a view into the original array ( of course provided that you don't do any advanced indexing ; this should be guaranteed by your specification of valid indices ): #CODE 
+If the array is one-dimensional , this means it has no effect . 
+The problem with using ` view ` , however , is that a 32-bit integer becomes viewed as 4 8-b it integers , and we only care about the value in the last 8-b its . 
+So this won't solve OP's question ( unless his nD is 2 or 3 ) . 
+Note : this was meant as a comment , not an answer ... just needed more room to put in the example above . 
+If I wanted to change the data type of a numpy array permanently , is reassignment the best way ? 
+The shifted shm-allocated array is indeed accessible from other processes . 
+The second solution you propose is better from that point of view . 
+It checks for nans and empty input strings . 
+The ability to extract columns and rows by header name ( as in the above example ) 
+With Python 2.6.5 or Python 2.7 , and Numpy 1.5.0 , I don't get any error . 
+Returns a boolean array the same length as ` ar1 ` that is True 
+If the objects in the array are not fixed size ( such as your MultiEvent ) the operations can become much slower . 
+@USER : True the code I gave would not be all the efficient 
+You print ` Length of together 2708000000 ` - where is that ` print ` statement in your code ? 
+Is there a way to copy just the reference to b , so that when I change b , the change is reflected in ` a [ ' B '] [ i ]` ? 
+If the matrix is not symmetric be careful about the order in dot . 
+So I changed the " array " to matrix . 
+config paths , cflags . 
+gnibbler : That completely misses the point of the algorithm , this is a simple example , what I am doing is Gauss-Seidel iteration , which infers information about a location in a matrix by using data that has already been inferred in previous entries . 
+how do i find the smallest then if this gives me the n greatest values ? 
+@USER : you can wrap the insides the prange loop in ` with nogil : ` to use any Python constructs . 
+For each ` Xi ` greater than ` lower_limit_X ` and less than ` upper_limit_X ` , I would like to get the number of ` Yi `' s that are greater than ` lower_limit_Y ` and less than ` upper_limit_Y ` . 
+and find the roots ? 
+I'd like to generalize this to an ellipsoid , that could ideally have any rotation . 
+Is there any way to integrate the entire array at once , or do I need to integrate element-by-element ? 
+I need to sum 
+with ' f ' and ' F ' , or before and after the decimal point for a floating 
+You can write that as a matrix : #CODE 
+In fact , if you use tuples as Justin suggested and iterate directly over the rows of the array ( ` for row in data : `) , it's actually faster than my method below . 
+Using the ` ctypedef ` keyword in Cython will make it add the C / C++ ` typedef ` statement with the given types in the compiled Cython-code . 
+Here is how I would compute a subset of the elements of C given a list of tuples of C index values . 
+In my specific problem ` A , B ` are slices out of a bigger 3-dimensional array ` Z ` , 
+The solution to get all the data you need as you build the list , by using the accessor on each iteration . 
+Edit : Actually you could also sort both arrays into one ( and remember which one belongs to which class ) , then go from there by checking where two of the different class are next to each other . 
+How can I integrate it from a given value ` a ` to another value ` b ` so that the output is a corresponding array ? 
+I want to multiply a sparse matrix A , with a matrix B which has 0 , -1 , or 1 as elements . 
+If you turn a ` dict ` into an array , you'll get an object array . 
+` Holy CPU cycles batman ! 
+Note : Xarray and Yarray are each single-column vectors with data at each index that links the two arrays as sets of x , y coordinates . 
+Yeah , my rule-of-thumb is ** numpy ** for anything that can handle small amounts of latency but has the potential to be very large , ** lists ** for smaller data sets where latency critical , and of course ** real benchmarking ** FTW :) 
+You need to know what kind of information is stored in each field for the ` struct ` module to make sense of each field . 
+Once you have this array , you can get your sums for each vertex as #CODE 
+Where are ` plot ` and ` show ` coming from ? 
+But it might be easier ( and more understandable when you look at the code in the future ) to just drop into Cython to get this done . 
+I can't comment on the Perl code , I simply don't know it at all . 
+I updated the answer with a full example . 
+There you will find C code which provides the same functionality as ` fmincon ` . 
+so for instance , for an array the code looked like #CODE 
+I've been trying to find a solution for hours . 
+Note that as implemented here , the first method gives incorrect results according to my test . 
+This is my test code : #CODE 
+This will short-circuit if you just want to determine if any match exists . 
+It also helps to know that a resource like Wolfram Alpha is available to you at all times . 
+What I meant was if we had three arrays ` X =[ 0 1 2 ] , Y =[ 0 1 1 ] , and Z =[ 0 2 2 ]` there would be six values in the range of greater than or equal 1 and and less than or equal to 2 . 
+You should really split this into two separate questions since each part is distinct . 
+This doesn't answer your problem exactly , but I think especially with the sum issue that you should see significant speedups with these changes . 
+Basically you're iterating through each item in ` Xa ` and omitting the ones that don't fall with the range . 
+This code has been written following the tips ( and copy / pasting ): #URL 
+I would look at this question : #URL 
+As @USER -Anderson asked , why not avoid making an array ? 
+to create such an array . 
+In short , I find class C to provide an implementation that is over 60x faster than the method in the original post . 
+I suggest allocating an array of the correct size up-front , then populating it with data in each iteration . 
+edited my solution to include what I would do . let me know if this work , as i cannot fully test because i dont have test data . 
+The problem is if i don't want 0:10 , but an arbitrary set of indices . 
+and it occurs at the line : ` del innerAry [ j ]` 
+Do you have any references to back up that ` NaN handling is much slower than " normal " float at the CPU level ` ? 
+What do you mean by the line ? 
+For example if we stick with a linear search we can at least start at the appropriate end ( search backwards to find last value matching a condition ) . 
+Yes , but you don't get a numpy array out , do you ? 
+This seems like a simple question , but I haven't been able to find a good answer . 
+@USER : it could also mean they are both strictly periodic and sinusoidal , but their frequencies are integer-independent ( ie . the interference wave is not periodic ) 
+Python : How to rotate an array ? 
+@USER Your edited sample input is still not consistent with your expected output . 
+You can calculate the variance yourself using the mean , with the following formula : #CODE 
+Populate numpy matrix from the difference of two vectors 
+where #CODE 
+Interleaving two numpy index arrays , one item from each array 
+I was worried about the performance , but the difference in load time is tiny for me . 
+I looked for an online reference but couldn't find one . 
+Numpy / Python : Array iteration without for-loop 
+If you want it printed with commas , you could convert it to a Python list : #CODE 
+I have included my code to see if you can help me implement some kind of ' fminsearch ' to find the optimal parameter values k0 and k1 that will fit my data . 
+Any ideas what this could be all about ? 
+What does " IIUC " mean ? 
+I can't seem to find examples that don't rely on the former syntax . 
+Any help would be greatly appreciated . 
+Where blocks is a 3 dimensional numpy array . 
+The science / engineering application I'm working on has lots of linear algebra matrix multiplications , therefore I use Numpy matrices . 
+when I print Chao , the product of this loop I currently have this : 
+pyopengl buffer dynamic read from numpy array 
+I also have an array which is my desired subset of ages . 
+It does automatically expand the array , but now every item in the array is ` None ` and cannot be changed . 
+I'm liking fortran more at the moment because by the time you add all the required type annotations in cython I think it ends up looking less clear than the fortran . 
+( There are also chances that Python stores the number on the heap and all you get is a pointer to it , approximately doubling the footprint , without even taking in account metadata but that's slippery grounds , I'm always wrong when I talk about Python internals , so let's not dig it too much . ) 
+Do you have any clue ? 
+your method works , @USER . put it into an answer to get some acceptance points . 
+that blas is reference blas from netlib - the slowest blas around . install atlas or mkl instead . 
+The ` not ` operator implicitly tries to convert its operand to ` bool ` , and then returns the opposite truth value . 
+The recommended way to do this is to preallocate before the loop and use slicing and indexing to insert #CODE 
+If the simple sort solution is good enough , clearly go for that . 
+Basic idea being , I know the actual value of that should be predicted for each sample in a row of N , and I'd like to determine which set of predicted values in a column of M is most accurate using the residuals . 
+Fill in missing values with nearest neighbour in Python numpy masked arrays ? 
+Any tips on what I'm doing wrong ? 
+SO I have a file having three columns ; Frequency , Power spec . 
+In numpy , your array is 2 x 5 , isn't it ? 
+For small-ish problems , I would certainly just create the new array . 
+If each element takes up 4 bytes , it would require 4,000,000,000,000 bytes of memory . 
+TypeError : must be str , not bytes 
+Error while computing probabilities of an array list 
+This produces the array , but I don't know which row corresponds to which year-disease . 
+I'm not sure what you mean by " all from numpy " , but you should never need to use more than one form of ` import ` at a time . 
+The problem is that you have an array of strings , not an array of numbers . 
+how can i effectively check items of a list of tuples against all the items of another using numpy or tabular ? 
+Replace part of numpy 1D array with shorter array 
+Python 2.6 numpy interaction array objects error 
+So for square matrices it is basically syntactic sugar for the exact same operation . 
+If we evaulate the ij th element of the matrix U*A*V , then it must equal both #CODE 
+How can I get new array ` B ` such as if ` row_set = [ 0 , 2 , 5 ]` , then ` B = [ A_row [ 0 ] , A_row [ 2 ] , A_row [ 5 ]]` ? 
+I have tried the following to fix it : 
+The weighted sum result is approximated by the multiple passes and actually after very few of them the output is already smooth . 
+Basically , it comes down to checking before you add . 
+Any ideas ? 
+Do you really have matrix type or just list of lists from python ? 
+zI [ N-1 ] = f ( xI [ N-1 ] , yI [ N-1 ]) . 
+The actual size of the numpy array is 514 by 504 and of the list is 8 . 
+` array ([[ a , a , a , a , 0 , 0 , 0 , 0 , 0 , b , b , b ,... ] , 
+What's wrong with just separating it out into real and imaginary parts ? 
+I have an N-dimensional array and a set N index arrays , who's values I want to increment . 
+As @USER suggests in a comment , if you really want a 3D array -- which is not entirely clear to me from your code sample -- you can use : #CODE 
+In another question , other users offered some help if I could supply the array I was having trouble with . 
+The other thing is changing the size of the ticklabels in the colorbar which I haven't figured out . 
+Unfortunately , these lines are fast already , but I will take any speedup to offset the IO issues I have using GDAL . 
+First you need to write a function that when given an array of values , with the middle one being the element currently examined , will return some computation of those values . 
+Thanks in advance for any help . 
+so what you want is some sort of recursive assignment -- but i don't believe there is any guarantee that this will settle down into a constant value . sure it does in your case , but not in general -- for example : ` a [: ] = 2*a [: ]` would loop forever . 
+Just initialize the array of ` float* ` to point to each of the rows in the 2-D array . 
+Do things go wrong gradually and more and more , or all at once ? 
+If you don't find anything useful then try " R " . 
+Unfortunately , when I tried it I got the error : " ValueError : array is too big . 
+EDIT 2 : This raises another question - What is ` env ` and why does ` make ` add it ? 
+However it doesn't give you negative overflows , probably because ` uint32 ` fits inside the positive values of the ` int64 ` . 
+Consider for example the array : #CODE 
+One difference could be the result of python having to take extra steps to resolve the float64 types . 
+How do I turn this into a numpy matrix ? 
+I want to rotate an array but not as a whole , only small portion of it . 
+is so much more readable than any dot ( a , b ) equivalent . 
+The array looks like : #CODE 
+Constructing an n-by-n matrix in Numpy is easy and fairly efficient . 
+Numpy array broadcasting with vector parameters 
+It only works like this for numpy ` array ` s . 
+@USER : Also there's a mistake in your code I think : because when you set elements to NaN in each iteration , the elements are not restored to their pre-NaN values for the next iteration ! 
+Quick question : is there any reason why you use 
+Now the question is , which equal area projection shall I choose in order to have comparable area sizes for the polygons . 
+numpy array multiplication issue 
+( 2 ) When I change the connection keywords to check_same_thread=False , then the full pool of workers is used , but then only some queries succeed and some queries fail . 
+It also has the advantage of being able to load and store transparently with HDF5 . 
+Bah : " operates on two n-dimensional arrays " should be " operates on an n-dimensional array " above . 
+Instead , they expect the user to either pass an array of shape ` ( r , c )` exactly , or for the user to pass a 1-D array that broadcasts up to shape ` ( r , c )` . 
+Though , it isn't so straight forward because I don't necessarily know how many duplicates of each lon or lat there are which determines the shape of the array . 
+geom function takes an n+1 X 2 array and n as input , i guess i'm doing something really stupid ( which i think i am ) or i don't understand this behavior #CODE 
+When I tried this , I got sort of similar shaped " tiles " of different colors rather than 3 Gaussian humps . 
+There was a comment here saying that the Apple version of python 2.7 comes with numpy so you shouldn't have to install it at all . 
+For more general solution , you could use somekind of edge detection method to find only the edge points . 
+If you see any errors ; provide a link to the code that can be run . 
+What I am looking for is a quick and easy way to find the closest ( nearest neighbor ) of some multidimensional query point in an 2D ( numpy ) array of multidimensional points ( also numpy arrays ) . 
+How do I get the ` Image ` part only and how do I convert it to Numpy Array ? 
+Maybe it'll save you some frustration =) 
+Is there any way to rewrite this functions with Numpy ? 
+Is there any easy way to speed my calculation up ? 
+A variable in Python is just a label for an object ; giving the object a new label doesn't change the object itself at all . 
+But this is actually where the doc belongs . 
+So given the sorted version , you can reconstruct the original by " putting items back where they came from " : #CODE 
+Note that this all assumes that your values are normally distributed . 
+( Bounding box intersections are actually a rather poor way of deciding where to place labels . What's the point in writing a ton of code for something that will only work in one case out of 1000 ? ) 
+The python code outputs eleven 0's , eleven 1's all the way to eleven 39's . 
+@USER ; in above example z is ( 5 , 2 ) array created by another function , with first dimension from the number of True ( at least one True in x > y ) , here 5 , and second dimention as the first dimension of x , here 2 . 
+I have a NumPy array of values . 
+I just need the total of all the values instead of the actual values themselves . 
+Didn't think about multiplying my array of number by an array of booleans to extract my data . 
+not to convert floats to floats would be the first step . 
+make a list of all the days 
+This way , you could access all the ` A ` through ` result [ ' label '] [ ' A ']` ... 
+picking out elements based on complement of indices in Python pandas 
+Joran , could you please explain what you mean more ? 
+Anyone have any clues for what I can do , or approaches I should research ? 
+Appending data to an existing array is a natural thing to want to do for anyone with python experience . 
+Note that you get a sorte copy of the array . 
+I'm not sure that this is the way that you should do things as I'd expect numpy to have a much more efficient method of going about it , but do you just mean something like this ? 
+` KMID ` is a function , not an array , so you can't index it with ` : ` . 
+Insert to original code in question : #CODE 
+Multiple conditions using ' or ' in numpy array 
+Usually , it's best to avoid the matrix class ( see docs ) . 
+I have tried two different methods but both of them are slow . 
+Not really , you can construct the Counter from any iterable . 
+( I have the code ready , but as i'm new to stackoverflow , i don't know where to put it . Here , in this comment field ? Or rather making a new answer ?? ) 
+For example , one simple method to generate at most rank ` k ` ( when ` m ` is ` k+1 `) is to get a random valid B 0 , keep rotating all rows of this matrix up to get B 1 to B m-2 , set first row of B m-1 to all 1 , and the remaining rows to all 0 . 
+Glad you saw around it ! 
+@USER : basically I am converting some matlab code into python , I can not write actual code because that is confidential , ( 1+float ( 100 )) Here 100 is coming from two dimension string matrix , that why I have written float to convert string variable . 
+instead of call plot ( test [ " x "] [ 5:10 ]) , you can call the plot method of Series object : #CODE 
+The size of a slice with ` 0:5 ` is not 6 as you say : it's 5 . 
+This ensures proper display and syntax highlighting - right now someone who would usually fix your formatting is likely to not do it because he'd have to remove all the HTML linebreaks on his own . 
+I believe you've reduced the problem to a one of finding roots . 
+In order to make sure it is still multiprocessor safe , I believe you will have to use the ` acquire ` and ` release ` methods that exist on the ` Array ` object , ` a ` , and its built in lock to make sure its all safely accessed ( though I'm not an expert on the multiprocessor module ) . 
+So , given your matrix M , your problem asks to maximize the PB function #CODE 
+I would like to find all elements within a specific range . 
+I cannot seem to find how to do that . 
+Any thoughts ? 
+If you want the PRNGs to be independent , do not seed them with anything . 
+In the end I'll probably take n randomly selected samples . 
+This is a mystery to me , though I would guess that there must be more overhead associated with accessing an array element than with appending to a list . 
+If it's not reasonable , you can always decompose the matrix multiplication yourself . 
+If the vectors do not have equal dimension , or if you want to avoid numpy , then perhaps , #CODE 
+In particular , you can't index a 2D matrix with a single integer , because -- well -- it's two dimensional and you need to specify two integers , hence the need for the extra 0 index in the second example . 
+nearly all of which the author responded to and in some cases , 
+I added the slow Python code to the description . 
+The easy way - pick a random number q [ 0 , 1 ] . 
+will be the number of bytes which the pattern of streams will repeat after . 
+Any idea how I can later make 1.6.2 in / usr / local / lib work with python-dbg ? 
+Because I'm still not quite grasping the method and there seems to be simpler ways to solve the problem , I'm just going to put this here : #CODE 
+how do I fix that ? 
+The usual shape is ( xx , ) . 
+what does ` [ 0 , 1:3 ]` mean ? 
+@USER he basically considers x as my array and defines a function that gives the range of each row .. works fine . 
+I was just curious to find a * best practice * in this instance I suppose . 
+I'm guessing there's an easy way to do this without iterating through the full array . 
+I don't know how efficient ` Image ` is at storing images , but a list of bytes uses four bytes of space for each element in the list , so you'll burn more than 8GB of ( virtual ) memory ... and a lot of patience . 
+They are all floats 
+I want to efficiently iterate through the two columns , a [: , 0 ] and a [: , 1 ] and remove any pairs that meet a certain condition , in this case if they are NaN . 
+I turned ` color_array ` into a two-dimensional array , since this seems more appropriate . 
+An important caveat is that the array must be * contiguous * in memory -- otherwise the view fails . 
+You might want to also make sure that you use a method of generating your random numbers that causes them to fall into the range of 16 bit ints . 
+I have a 100x200 2D array expressed as a numpy array consisting of black ( 0 ) and white ( 255 ) cells . 
+If you know the shape of the array ( to find discover the edges ) you can use simple math ... annoying , time consuming ( to write and process ) , but pretty straight forward . 
+And yet another way , possibly faster ( thanks for all the comments , guys ! ): #CODE 
+Now , you can construct another matrix , B , that has 1s at certain locations to pick the elements from the set E . 
+But overhead of all the object creation it's true , plus the time of Numpy array creation . 
+I was trying to calculate the curvature of a surface given by array of points ( x , y , z ) . 
+You also don't have any speed improvement , when you try to do a function return in C instead of doing that in python , also array access is neglectable compared to the cost of the function call . 
+I want to view the file outside the python environment also . 
+The following code demonstrates how to get the indices of some vertex ( number 17 , in this example ): #CODE 
+@USER : the idea is possibly that two calculation that both arrive at positive infinity could get there via ** wildly ** different calculations . 
+Given a wavelength ( or band number ) , I would like to extract the 2D image corresponding to that wavelength . 
+( d / dx ) ^n ( d / dy ) ^m f ( x , y ) 
+The ` a [: , 0 ] <3 ` will create an array of ` bool ` with the same dimension as ` a ` , which says which elements go into the selection . 
+( Maybe I should add this to this answer . ) 
+Count elements in a box 
+The problem may cook down to mean being subtracted over all numbers , but in the next step they are not used anymore ... 
+I wrote a function that works , but it is extremely slow . 
+The plot commands split the arrays in two halfs and swap them to get a nicer picture . 
+Any help would be appreciated ! 
+` be replaced with if ` d ` should become ` array ([[ 1 , 1 ] , [ 2 , 2 ] , [ 3 , 3 ]])` ? 
+How big is the triangular matrix ? 
+Program is to add two signals using Matlab 
+This tax makes sense when you are doing CPU bound operations like matrix decompositions and whose processing time takes longer than the time it takes to copy the data . 
+Numpy object array of numerical arrays 
+After looking at these page and other I got it working using raw uncoded buffers using mencoder ( ffmpeg solution still wanted ) . 
+thanks seberg . but I can create an array of objects using numpy , then I can assign an arbitrary array to each element of array ( in python interpreter ) . what do you think of this ? 
+Check if values in a set are in a numpy array in python 
+Would you know of a way to ** average ** the duplicates instead of sum them ? 
+I think that I phrased the question badly ; what I meant is I want a list when I input a list and I want a numpy array when I input a numpy array . 
+I have a list of numbers and I need to split into to corresponding arrays of different sizes , but that make up all the combinations of the array splitting up . 
+Yes , it is true that before you ask any question on stackoverflow , you should perform a minimum of research which includes looking for existing answers on stackoverflow . 
+This is probably the thing that is most important for numpy to know ... although there may be other subtle differences ( if numpy is doing some dirty hacking to get at information stored in a common block for instance ) . 
+You might want to add this link to the response : #URL 
+A list takes up significantly more memory than a comparably sized numpy array ( factor of ~2 ) -- So why are you going back to using lists ? 
+From my understanding , when you use python standard operators , these are fairly similar to using the ones from " import operator . 
+This gives you 4000 samples of your function , sampled at 33.33 Hz , representing 120 seconds of data . 
+Before , what you were doing was having SWIG convert the C++ ` std :: vector ` objects into Python tuples , and then passing those tuples back down to ` numpy ` - where they were converted again . 
+Currently I am generating a list of 7 numbers with random values from [ 0-1 ) then multiplying by [ X1 .. X7 ] 
+Introducing the transposing of the matrix everything is working correctly . 
+So I did everything , but I feel the slicing method I used ( and the initialisation of ` b `) is not pythonic at all : #CODE 
+The python extension calls this function and places it into the module-level numpy array variable ` arr ` ( and I make it read-only for good measure ): #CODE 
+Depending on the rig you have at the moment , optimizing your SciPy 
+Examples would be the git commit id of the current version , and the input parameters used to generate the data so that later I can look at the data and know exactly how I created it . 
+There are other ways to do this ( you may want to avoid storing a reference to a specific numpy array in each ` point ` , for example ) , but I hope it's a useful example . 
+I downloaded a new version of ` pip ` and installed locally in my home directory but the system wide old one is still used when I type ` pip ` at the prompt . 
+I need to iterate over the matrix summing all elements in rows 0 , 1 , 2 , 3 , 4 only 
+If you compare point i to point i+1 and remove all for which the distance is less than your threshold , then you will miss the cumulative effect of many small steps in the same direction . 
+In my output array I only want to include rows for position values which appear in all 3 input arrays . 
+Perhaps you should change the title of this question to more accurately reflect your specific problem . 
+Perhaps there is a good choice for this special case . 
+it must be a record in syntax boycotting ! 
+Addressing ranges in a Scipy sparse matrix 
+Still , I would like something much more computationally efficient , like relying on builtin numpy functions , but I cannot find relevant functions , can someone help me ? 
+You can run the test suite to see if the build works . 
+The bit where you index into the original CSR matrix is surely expensive . 
+I don't believe there's a way to do what you're asking ( it would require unaligned access , which is highly inefficient on some architectures ) . 
+This should give a large speedup compared with iterating over each row in the array ... 
+Not sure what addition you're talking about nor what random replacements you mean . 
+I have a counter for c , and if it hits 50 I want it to print out that You have been mauled by a bear , and then on the screen have a bear pop up , whether the bear image is just a file in the same folder , or if it links to a webpage that I have the bear image hosted at . 
+I have yet to find anything in the python documentation that states how a list of list is assembled , is it like : #CODE 
+I'm trying to use leastsq for this , but I'm unsure how to adjust the line to be below all points instead of the line of best fit . 
+I do not want to store the array objects , I want to store the lists of numbers in a record list . 
+I have tried two different methods but both of them are slow . 
+Where can I find information regarding the ` L ` option and other options ? 
+The essential problem was that when the array is 1d you call it array [ i ] when it is 2d you call it array [ i ] [ j ] , without two separate cases I don't know how to handle this . 
+You can iterate through your input file ( in chunks if possible ) and convert the incoming data and insert them as rows into a memory-mapped numpy array . 
+This all works great when I run the Python ( command line ) tool that comes with Python . 
+The standard linear algebra methods you seem to be thinking of cannot ( to the best of my knowledge ) be used to solve this sort of constrained integer problem . 
+You will probably find answers to all your questions regarding NumPy and parallel programming on the official wiki . 
+Also the size will increase as I process data with higher and higher horizontal resolution . 
+Where each row ( of a fixed arbitrary width ) is shifted by one . 
+ATLAS 3.10 doesn't know how to handle a lower number of cores than the number it had at build time and generate an exception . 
+This doesn't result in a ` NaN ` in the last place of your array though . 
+I've tried to add -march=i486 to the gcc line , as suggested in this post : 
+I tried indexing it before but i didn't get the trick of adding 1 to the size of label 1 before . 
+Merging ND array into single array and list 
+Its not complaning any error , so I don't know what to do in this case . 
+Here is a sample implementation : #CODE 
+And then proceed with the split of each shuffled array as in HYRY's answer . 
+This is quite a generic solution : #CODE 
+List comprehensions and generator expressions are fairly fast , and they don't suffer any overhead from trying to guess what the type or size of the returned item should be , as they don't care . 
+Examples and further explanation of this 40-year-old algorithm at the matplotlib FAQ . 
+The copy will only copy the memory page on which the refcount integer resides . 
+What is the cleanest way to add a field to a structured numpy array ? 
+Is there any way to redefine my function so it will pass without warnings ? 
+@USER : the reference count might be needed ( though I'm not entirely sure in this case ) because no other thread must deallocate the array . 
+I looked around but couldn't find anything syntax wise regarding this specific scenario . 
+While this involves copying , do you do this often enough for the cost of the copy to be a problem ? 
+I think you can see where this is going . 
+Here is a sample function ( you need to have the pyopencv module installed ): #CODE 
+I have learned now that numpy does internally create a temporary array for the output and in the end copies this array , that is why it fails for the values that are zero in the original array . 
+If your list is sorted , you can achieve very quick search of index with the ' bisect ' package . 
+How to save a boolean matrix ? 
+I have need to slice an array where I would like zero to be assumed for every dimension except the first . 
+will compile machine code that will execute fast and with minimal memory overhead , taking care of memory locality stuff ( and thus cache optimization ) if the same array occurs several times in your expression , 
+First , note that for most everyday uses , you probably won't require an array ( which is a special datatype in Numpy ) . 
+Not sure if it helps but if you add another array of a different shape , it converts back to the types you want : #CODE 
+plus lists of known objects falling inside the field of view . 
+Look at the documentation here and here to see how to set your backend . 
+numpy array plot matrix matplotlib 
+After the records are loaded , I can access them in the normal NumPy fashion . 
+Eventually , I'm looking for a way of creating graphs similar to the one below using naive Python ( with any " standard " library such as numpy , matplotlib etc , but without using R or other external tools ) . 
+On a general note however , in numpy it is better to always use base class arrays unless you are doing a lot of matrix multiplications , etc . 
+Exact , in optimization context , and as far as Powell Badly Scaled function is used for test , I impose some box constraints . 
+At the moment I have the lines in a list of lists then looping through and testing for identity with the previous value at index 0 in the list but this is very clumsy . 
+Calculating the exact dimensions of this array : I tried len ( x [ 0 ]) and len ( x ) to get the both dimensional coordinates , but this way seems a bit hackish . 
+If you know the size , you might want to consider pre-allocating the array and parsing it yourself . 
+What does the autocorrelation array look like if you plot it ? 
+Where it says : #CODE 
+How do I add a title to my MatPlotLib basemap ? 
+It might help issue of things refusing to update , and at the least it will be faster . 
+For future use you should really find out why it is installed in a location that isn't searched by python by default . 
+I've done that and I'm still getting the same error - it can't find the sip module . 
+ImportError : DLL load failed : The specified module could not be found . 
+This has happened previously ( and I was not able to get around it ) . 
+@USER SObolev : Histograms of the values falling within a range of keys where each bin is of size 0.1 
+Also , now that I look at it , the y-axis limits haven't been set right . 
+I've looked for various solutions to my problem but can't get any help . 
+I normally use something akin to the following for this purpose and the result is a very nice plot where x1 , x2 and x3 are defined as follows 
+And I have all of them installed . 
+When I save these plots to pdf , it takes a long time to write , and reading the pdf is even worse . 
+Seems like a security setting on OS X is preventing it , and the quick fix seems to be to run apache as root . 
+Any ideas how to deal with this problem ? 
+If I remove the function and put its body back under the " if name == ' main '" block , it works as expected ( like in the original code ) . 
+Seems like a bit of searching would have turned up [ how to set custom ticks ] ( #URL ) , where the defined ` t11 ` is where you would write out A , B , C , and D . 
+@USER , that would require to have root access ( sudo ) which i dont have ! 
+Any suggestions how this can work ? 
+Any help would be appreciated in understanding what I am missing . 
+How can I add the ` P_g ` values from each section to their respective column ? 
+Is there any other python package that would help ? 
+I'm having a problem , where I can't do a step graph of 2 lists I have , in which I need list ` x ` to be the x values , in which each ` x [ j ]` value will add with ` x [ j+1 ]` value for each step . 
+The best thing would we if one could integrate it into the label of the colorbar ( to say the color means A in units of B where B includes the order of magnitude ) . 
+ive tried to fix it with setting ax limits but that does not work . 
+@USER : I added some more info and also a code used . 
+If I wanted to make a combined image like the one shown below ( original source here ) , 
+When you ** add ** two ** random variables** , the resulting density is the ** convolution ** of their ** densities** . 
+This made the program work just as in Windows , without any other modifications necessary . 
+Using PySide in place of PyQt4 results in the same behavior . 
+However , the first item appears to be a float #CODE 
+The code below loads the image data hosted on github and plots it : #CODE 
+I reduce the values to months using : #CODE 
+That would solve Question 1 . 
+I modified you code , and it can product the same ticks now . 
+`' $\xi$ ( r ) M$_{200}$ 13.4 '` : several ` $ ` , where you should have only one . 
+I just completed a brute force test running through all permutations of [ 0 , 1 , 2 , 3 , 4 , 5 ] for the tmp_planes , a total of 720 different arrangements . 
+The way to fix it is using pip , as mentioned by @USER . 
+Do you mean a scatterplot of your dataset instead ? 
+Plotting subplots with secondary continuous y-axis across all subplots 
+However , I want to be able to call something or write some code which then skips any value in the array which would cause this error , then ignoring that row altogether . 
+Any help would be appreciated . 
+You are typing your code in at the bash ( terminal ) prompt , not the Python interpreter prompt . 
+Also , if you take a look at Rob's answer , its far simpler than the example shown on the website . 
+MPL is a big project with lots of moving parts , any help keep them up is appreciated . 
+I am less certain if I am solving the correct problem . 
+I am having a problem getting matplotlib to work well with interactive plotting ... what I see is that after displaying a few frames of my simulated data matplotlib hangs-and doesn't display any more . 
+If anyone has any idea , I appreciate the help . 
+You can populate a general 2d array by : Zhu shows in the answer below . 
+Have a look at this example : #CODE 
+That way , it is possible to see 2 dots on the same place . 
+This error shows up when the size of a and b ( taking from above example ) is not the same - so , 128 x-values here should be plotted against 128 y-values . 
+[ These should all be installed into / usr / local / Cellar , which is the default install location for homebrew . ] 
+I'm trying to make an exponential fit to find the Lyapunov Exponent of this data , however , I keep getting this error : #CODE 
+So I wrote an argument ` origin= ' lower '` . 
+Note that I don't reduce to 2 , I reduce to 10000 , and then extract the first 2 . 
+which you can run with this sample code : #CODE 
+Try converting your the pandas data series to lists or numpy array before plotting . 
+If I de-homogenize only the last column I can find the center of where the ellipse was projected , but I would like to see some shape information as well . 
+Ignoring a problem doesn't fix it . 
+Will add the code . 
+I found that in the folder C :\ Program Files\Python27\DLLs I cann't find the _socket file 
+The index is zero-based . 
+The image ggd4 for the test can be downloaded from : 
+Load the data sets individually , and then plot each one individually . 
+Have you looked at mplot3d on matplotlib ? 
+The columns are floats , I'm not using the index of integers . 
+Incidentally ( for someone reading this in the future as you know yours ) if you need to find your current Python version you can simply type ` python -V ` in the command line and it'll return the details , for example mine returns : 
+The code is located at 
+find the file from the link 
+@USER : What do you mean ? 
+Thank you in advance for any help you can give me 
+how i can add vector arrows starting from 0 , 0 and end at the points that i want ? 
+If you want the sum ( not the integral ) to be one #CODE 
+As I have no idea how long ` data_all ` is , I created a ( random ) array , which in my case turned out to give a 2D array with 512 columns ( lucky shot ) . 
+Do you mean something like this : 
+Can you copy and paste the code lines described in your comment , please ? 
+When I print this in A3 ( good size ) it still almost unreadable because the letters are stacking in each other . 
+I mean my grid is 20 units in x direction however , my resulting plot is 10 units in x direction with replica plot from 10 to 20 units . 
+Now how to plot [ M , F + other ] 
+To specify that you want the first interval filled with " pure " black , set ` vmin=mean ( lvls [: 1 ])` in your example . 
+Your Data looks pretty good without any filtering , your " outlieres " all have a very big error and won't affect the fit much . 
+This is a terribly unclear answer , at least some comment in the code or explanation of why this helps floating point error would be nice . 
+I produce a histogram where I put the weights in the parameter #CODE 
+Besides , I see that you use ` numpy ` in your code , so you can save and load file by ` numpy ` with a more compact codes like this without using the ` csv ` module . 
+Usually these sorts of simple array reshaping operations can be done in a couple of lines with Numpy , so I feel like I'm missing something . 
+I don't see any way I could do that . 
+Look at the docs : #CODE 
+To fix that we turn the frame off on ` ax1 ` ( so we can see ` ax2 `) . 
+At one point I was able to trick it into working from the console by installing some thing in the virtualenv , but other things only in the global namespace , but I forgot how I did it . 
+( Technically we could skip the ` FigureCanvas ` , but it will be needed as soon as we want to save the plot to an image , etc . ) #CODE 
+But how can I make plt do all this stuff ? 
+From your piece of code it seems to me that ` clust_data ` is already a list of lists with the correct shape and that ` cellText ` after being filled is going to be the same of ` clust_data ` . 
+Anaconda doesn't by default load pylab into IPython so you can choose the backend after launching IPython . 
+Most likely I'll have graphs with longer labels and if I put them near lines , it'll look messy . 
+The lines are random within ranges that cause clustering of lines ; a behavior I wanted to verify . 
+have those lists all the same length aka would it be directly compatible witha 2d numpy array ? 
+Any assistance will be appreciated . 
+I have another working project where the toolbar is in the same panel as the canvas , and I think that might be the key difference between the two . 
+any of #CODE 
+Which way is the easiest to load all txt files ? 
+( Note that F is not given in the data , but you gave it as an example ) 
+Now I need to put this plot in a PyQt form . 
+Where is the URL API documented ? 
+Are there any other option ? 
+You need some criteria to select out the " best " in your context . 
+What do you mean when you say ` the first histogram will be the first column as the x values plotted against the second column as the y-values ` . 
+Unfortunately I don't have any experience doing this so won't be able to help . 
+A sample of my data to plot : #CODE 
+Also , I do not want user intermediation at all ! 
+Rather than put together an example from scratch , there's an excellent example of this written by Paul Ivanov in the matplotlib examples ( It's only in the current git tip , as it was only committed a few months ago . It's not on the webpage yet . ) . 
+what to do next ? 
+I think you'll find you get better help if you describe * what * you're trying to do , rather than * how * you want to do it . 
+( ie save etc ) . ill have a look at the toolkits :D 
+in place of #CODE 
+You could cast the array to a list : #CODE 
+Add as many symlinks to the directory as you wish , it gives you fine-grained control over which packages you want to make accessible . 
+In the end , I found out that the problem was simply that matplotlib could not find any backend for plotting . 
+Please change your title to describe your _actual_ issue . 
+If you did not create one when you installed matplotlib , you can get this template from the matplotlib source , or from the matplotlib website . 
+I am sorry to be so needy , but I really cant find any useful information anywhere . 
+Or is there another way to change the size ? 
+I did find the way to make my images almost what I wanted with : #CODE 
+any idea ? 
+@USER : I suppose the specific way I have it set up would work better if you had , say , a 1000x1000 matrix , as it lets numpy pick how the tics should be spaced . 
+As you can see it only covers half of the matrix . 
+You iterate the items in ` glass ` , but then compare to the whole list instead of to the current ` item ` 
+If that helps , this is the process that I am doing to save and plot : #CODE 
+Please consider answering your own question or removing it all together if you feel it does not add . 
+Now " print zi " gives me an array like before but with nan everywhere . 
+Im not by computer to test . 
+I want to put my custom datetime format but when I tried my custom date format is overlapped over the date given by default by pandas plot . 
+Change formatting on datetime ticks when plotting daily mean with Pandas / matplotlib 
+Any other way to get a similar effect ? 
+If you see the right side , the size is changed . 
+How can I select multiple data points with matplotlib and export it ? 
+Two steps to sketch an idea to solve this : 
+This is not necessarily the nicest possible way of doing things , and you may bump into resolution problems , as well ( check the size of the ` mayavi ` window ) . 
+Is there a way I can get y=x to show up even if I don't have a list of all the points that I plotted ? 
+Knowing all that , your example becomes : #CODE 
+Any Ideas what might be the problem ? 
+It appear that these disappear when I add the ` facecolors=UWR ( heatmap )` property to the ` surf ( ... )` . 
+Can you post the full traceback ? 
+The full list of positions is given here : #URL 
+unutbu's answer should fix it everywhere . 
+how can i insert the plot returned by create_predef_plot into f2 #CODE 
+And the formatted ones ( Used as _id of the documents after using aggregation ): #CODE 
+Any packages you accidentally installed for other Python installations , just reinstall them for MacPorts . 
+However , other programs seem to be ok with filling almost all the memory before the swap is used . 
+I'm not sure how to tackle this problem and any help or direction would be very appreciated . 
+i looked at sage , the source code is huge , does it support python out of the box ? 
+If any one know about it then please reply me . 
+I'll have a look at it 
+The main issue is that you can't make UI changes from a separate process from the main UI thread ( the one that all of your Qt calls are in ) . 
+I say " quick fix " because there are more changes that could be recommended . 
+Maybe look at the scikit-learn docs for inspiration ? 
+Labels are located at the right place , but label is not correct . 
+I ran the following code to get two plots next to each other ( it is a minimal working example that you can copy ): #CODE 
+here is the code where I create the plot and a picture of this : 
+Admittedly , I'm new to pandas but it seems like at every turn I am stopped , by my ignorance no doubt , but it's getting tiresome . 
+Are all of your modes needed to demonstrate the problem ? 
+Note that the explicit masking is no longer necessary in matplotlib master as arrays are now masked automatically internally . 
+( The disadvantage is that this method is much less flexible . ): #CODE 
+Python & Matplotlib : creating a chart first and showing it at a second moment 
+Put #CODE 
+If you require a completely manual installation , you should give those instructions a thorough read . 
+Take a look at this example . 
+I tried something like that already , but when I plot each data point individually in a for-loop , I see no way to use a colormap and colorbar for all of them . 
+Here's how to do it : if you find that an answer has been helpful to you , then move your mouse over the upper left-hand corner of that answer ( where the answer " score " appears between two gray triangles ) . 
+Can you recommend any tutorial for MATLAB speakers ? 
+The second plot keeps rescaling the x-axis for me , losing the overview of the full column 1 plot . 
+Thanks for the answer , I searched for event handling examples but could not find it ( I am newbie to python ) , can you please send me link to at least one such example . 
+You can find it here . 
+( I know I add nothing new , but the straightforward answer should be visible ) . 
+So , I don't even know where to start looking 
+When I try to run the example script at 
+Thanks for your comment , I have put everything , I wanna plot ( years , Frequency_accidents_years , regions ) 
+Via ` apt-get ` , I've tried installing ffmpeg , every codec imaginable , and even tried to compile ffmpeg from source . 
+@USER This isn't a bug , but a design choice . 
+The left-hand side can , however , contain any number of elements , and provided it is a tuple of variables the unpacking will take place . 
+You want to look at the OO interface , not the state machine interface for matplotlib . 
+This would be an interesting thing to add to the emerging thoughts about semantic objects in mpl . 
+Maybe you could post a sample of your data array ? 
+I believe this is because I'm plotting the image wrong and so it is plotting all the data as 0 . 
+Try running with ` python -X faulthandler ` and see if you get a useful traceback at the segfault . 
+Notice how only one body has been coloured , all other disjoint polygons remain white : 
+Thanks @USER , All I want set a plot title based on the what user is selected on the plot , for example if the plot shows a data from ' Jan 2012 ' to ' July 2014 ' dynamically want to set the title to ' Years ' and if the user selects from ' May 2014 ' to ' July 2014 ' then dynamically want to set the title to ' Months ' and if the user selects from ' July 2014 ' to ' July 2104 ' then dynamically want to set the title to ' Days ' . 
+I would like to know if I have a triangular marker , is it possible to control its orientation ? 
+I like to sort these points row by row . 
+Before comparing between these two PDFs , I would like to compare original time series and the series of Gaussian distributed numbers with the standard deviation and mean from original wind velocity series . 
+I will like create a alpha channel , for explanation I put a example : 
+The function is supposed to be smooth and connect at 0 and 2 pi in the y range of ( 0 , 2pi ) not touching 0 and 2pi . 
+I have run a similar script before , and I think I've imported all the relevant modules . 
+The sample image makes things clear . 
+Take Care , George 
+I don't know of any movie format that is vector based ( but I don't know a lot about video codecs ) . 
+I can't find anything like that in the galery and all my attempts do deal with the colorbar failed . 
+I encourage you to try all of the great ideas people are telling you , and I'm interested to see if any of them work ! 
+Have you tried setting your backend to SVG so that all of your images are in vector format ? 
+I appreciate any help :) 
+Would be better to change the title 
+My csv is like : id , author , title , language 
+After making all of the changes listed in steps 2 and 3 ( and correcting the spelling of the title ) , I get the following very-reasonable-looking plot : 
+When I look at the plot , the x range ends up being from 0 to 12000 . 
+It was still at -1 when I saw it . 
+when the bad points are deleted , the user can click on different buttons to classify the source ( lets say " star " , " galaxy " , " whatever ") . 
+Your ` Z ` ' array ' is actually a list of numpy arrays of different lengths . 
+when the 2D array is viewed as a color 
+I looked through the examples in MatPlotLib or R and they all seem to already start with random data to generate the image . 
+Filtering spreads out the information and makes the inner contours disappear . 
+This is probably related to upgrading the library , and having old versions of the javascript hanging around . 
+can you explain your data format in a little more detail and give us some copy / paste-able code to create a toy version of it ? 
+' To open " Python , " you need to install X11 ' . 
+@USER : You can certainly change the exact shape by modifying the factor " 3 " in front of the lower branch . 
+Downvotes are due to the lack of research effort ( if you look at the reasons for downvotes , it says " This question does not show any research effort ") . 
+As for the matplotlib version 1.1.0 , it's a really easy install , at least on my by-now-quite old Lucid it's no problem at all . 
+Numpy index out of range error 
+Though I want to add that manually saving the chart from Qt Widget is OK . 
+Without seeing any of the existing plotting functions , how am I supposed to know how similar or different they are ? 
+You can use spline to fit the [ blue curve - peak / 2 ] , and then find it's roots : #CODE 
+I had to add ` colorbar ( im2 )` right after the definition of im2 ... 
+Creating sample data #CODE 
+The numbers choose now many decimal places you want and the e chooses scientific notation . 
+To clear up the code , I put the individual plotting functions for the six or so groups of subplots into separate submodules and call them with the arrays they need for plotting purposes . 
+You have given us a list of requirements , but what have you tried to solve your own problem ? 
+For that purpose , I have put the following command in a for loop : #CODE 
+I work at a large company and do not have admin rights . 
+Note that it only detect truly equal placements , if you would have values of ` [ 0 , 0.00001 , 2 , 10 ]` , they would probably still overlap . 
+Suppose I have a triangle mesh defined by X , Y , and Z , the 3D coordinates of a point cloud , each a vector of length n , and UVW , a 2D m-x-3 matrix in which each row is a triplet of indices into the point cloud . 
+I am trying to create a plot with vertical bars equal to score length , AND with a radiobutton which enables the user to choose which level scores he / she wants to see , as such : 
+The 2nd set of data will also include the first as written in this snippet ( looking for good way to delete it that doesn't cause problems later down the line ) . 
+So you need to add ` u ` : #CODE 
+Regardless , once you get used to it , I find it much easier to write reusable plotting functions in python with matplotlib than in Matlab . 
+Now , you should be able to get all the libraries you need just as easily , using , too , Macports . 
+I believe that I'm using the TK backend ; I'm not married to that choice , but it's not clear how I should install other backends . 
+What is this float , and how can I convert it to a datetime ? 
+xtics and ytics labels because they appear for all values of xPoints and yPoints ( they overlap ) . 
+matplotlib ( equal unit length ) 
+Is there any reason why I can't do this ? 
+I am using the following codes to generate the square wave format [ Eg : from 0 till 5 ] using for loop . 
+Can you reduce the extent of you problem by calculating something akin to a density , reducing millions of line segments to maybe a few hundred or a few thousand data points ? 
+array erroneously filled with the same value 
+You can change the ` reduce_C_function ` option if you want something different than a simple average . 
+The whole traceback is rather large but seems to revolve around this part ( if I read it correctly ): #CODE 
+Matplotlib : WebAgg backend doesn't show any figures 
+While this seems what I was looking for , I'm not lucky finding any proper documentation for webagg . 
+If I were you , I'd start from this example to see where do these lines start showing up . 
+According to efiring , matplotlib does not support NumPy datetime64 objects ( at least not yet ) . 
+At least on my system ( OSX , Python 2.7 , mpl 1.1.0 ) , I don't have any issues with panning , etc . 
+Yeah , I understand why Pylab exists , and why it seems so attractive to people moving over from MATLAB , but over the long term I feel like it's a net negative because it makes it harder to share code with and get help from everyone who isn't using it . 
+How can I get around this ? 
+Function of Numpy Array with if-statement 
+By default it sets the ( 0 , 0 ) element of the array in the upper left corner . 
+I appreciate any help with this . 
+At the moment I do a for loop and plot each point : #CODE 
+What I currently have to convert it : #CODE 
+You should post your new code and the ** full ** traceback in another question . 
+I don't want to make any translations / shifts to the data itself ( it's a large dataset , etc ) , so I'd be looking to do this with some matplotlib-trickery . 
+Raster to Numpy Array - how to change a default color-scheme of a matplotlib plot 
+or invert the Y-axis : #CODE 
+So , a solution is simply to create a list of all objects that will be refreshed , and to call this ` remove ` method for everyone of them : 
+The best choice is to make your widgets in the order you wish them to appear . 
+Python : How to generate a power law graph 
+Unfortunately the broken command is also preventing me from tryig this , so I'll have to fix that first . 
+( ` 1 ` is the the start index , ` 2 ` is the increment ) In contrast , ` x [: : -1 ]` just specifies an increment of ` -1 ` , thus reversing the array . 
+One way around this is not to use the pandas ` plot ` method , but to directly the matplotlib's ` plot ` function . 
+where ` numctrl_ccm90 ` and ` numctrl_ucp90 ` are the widgets corresponding to the collimated counts at -90deg and the uncollimated counts +90deg etc . 
+Any tips ? 
+I would appreciate any comment or suggestion . 
+I looked at ` masked_array ` which is different . 
+Without having all the code listed , I had to make some assumptions about the data and about what you wanted . 
+You mean ` Axes3D ` is different from ` axes3d ` ? 
+If you already have python and gfortran and such , jump in at the point where you need . 
+Maybe you know a fix for this ? 
+How can I fix this ? 
+The background is that the array's values represent the water depth of a square grid . 
+And try debugging one step at a time : make sure you have good data before you try to plot it . 
+What do you mean the " label " ? 
+To do this we ll use the standard y=mx+b line equation where m is the line s slope and b is the line s y-intercept . 
+If you check the Matplotlib example for the function you are using , you will notice they use a similar methodology : build empty matrix and fill it with strings built with the interpolation method . 
+But the question still remains- how do I fix it ? 
+Based on the plot selection I want to set the plot title , so I need to know the current x -axis value after the plot is shown . 
+I have tried the following code but this creates 2 separate charts but I would like this all on one chart . 
+Any advice would be greatly appreciated . 
+How can I add colorbar to this code ? 
+I'm reading in a file with several columns , each of which contains around 100 values between 1 and 10 . 
+But for the all three plots We have same temperature T=4K . 
+I've downloaded a number of nifty programs and utilities ( and info sites ) / quantum gis , virtual terrain project , grass , I'm looking to get an xyz csv file into a format that these tools can use . 
+I have all the plots as several modules in python / matplotlib already coded , so that's perfect . 
+At some level , this is purely a matter of taste and depends a bit on what you are doing . 
+I really want to plot all the points in my matrix instead of the ( M-1 ) x ( N-1 ) . 
+I want to set a colour scheme for my python plots , so that they don't repeat the same colour like they are for A and H in the top plot shown below . 
+I've got a 2D numpy array with 1.0e6 as the no data value . 
+Is this what you mean ? 
+This is somewhat based on guesswork , since I can't test it with ` matplotlib ` , but something along these lines might work : #CODE 
+Here is some sample code resembling my case : #CODE 
+This is the result for printing every item in the xyz list and piping it into a file . 
+Or is your plot supposed to be an average or something ? 
+I just wasn't sure if changing some plotting functions around would help . 
+I agree with you , but I just tried to make code which uses as few less well-known features of ` matplotlib ` . 
+You could add a URL to the image , so someone with enough reputation can upload it to your post . 
+' plot ' shows me a line interconnecting all data points , but not the data points themselves ( unless there's a way I don't know of ) . 
+Did you add matplotlib to your PYTHONPATH ? 
+I have successfully edited and put it in my code and works fine , but my problem is that I can't show multiple lines of data in the plot , I want to show up to 10 lines in my graph but I'm getting a lot of errors when I try to add them . 
+That is correct , it draws a line from the lower left to the upper right of the plot as stated in my answer . 
+The problem arises when I select a subset of the data based on the time , ie : #CODE 
+Do you have any suggestion to fix this ? 
+I think I'm going to start from scratch so that I know what I'm doing but I need help on where to start . 
+It was a simplified example since I didn't have your code at the time . 
+The question does not define matrix very well : " matrix of values " , " matrix of data " . 
+The algorithm returns an array of ranges , then I create several histograms for the same dataset using different ranges . 
+( Since all you're saying now is " I have this equation and it doesn't work " , we don't have enough info to answer this and it's not a question that can be answered . ) 
+This method generalizes to any number of rows ( or dimensions ) . 
+Another possibility would be to put a tuple into flist : #CODE 
+I downloaded the 100meg datafiles from the full Basemap distro . 
+Do you have any other ideas to handle that ? 
+This controls whether the data limits or the bounding rectangle's shape are changed when the aspect / limits are changed . 
+Could you be able to give me some hints how to solve this ? 
+like you could in MATLAB , as well as having all the features of 
+I tried setting all x-values to ' 1 ' , but it turns out as kind of a 2d-diagram , anyway : 
+This is the hacky way to fix your aspect ratio on the image . 
+Is Anaconda's main advantage then that one has essentially all one would need , without needing continuously to pip this and pip that ? 
+Just for the record , there's no need to jump through all of those hoops with PIL . 
+I'll play with Dermen's link as well , but at the moment the most pressing problem is not having the data points be all squished together because the spacing between the ticks is very very small . 
+This is perfect , though I'm not sure exactly where I went wrong ... 
+you can manually set the size of the colorbar using : #CODE 
+Plotting values From a Array in Real time using matplotlib in Python 
+I will also gladly accept any examples where someone has built up any other distribution . 
+How sure are you that the code * runs at all* ? 
+I was temporarily disappeared at my day job ! 
+In addition , you'll find that ` pylab ` leaves a generous , often undesirable , whitespace around the image . 
+Force plot to have a special size or to increase the distance between subplots 
+If you do all the data processing beforehand , and provide the ( nearly ) finished product . 
+To make it clearer I want to get the x-axis and the y-axis range so as to find the mid point of the grid . 
+and you might want to add the ax to the colorbar . 
+The question is : Why does the ` matplotlibrc ` file have an invalid backend ( ` pyside `) value in the first place ? 
+Is that a bug ( could not find any reports to this ) , a feature ( ?! ) or 
+I'm not sure how you want to convert your data , but if you have irregular line lengths , the easiest way would be something like this : #CODE 
+No worries , I was coming at this from a radio perspective not a gamma-ray one . 
+How can I fix this ? 
+Is not there any wx example in your iPython distribution ? 
+Hmm , sorry , maybe I wasn't clear - colours [ li , :] only substitutes the tuple with index " li " , but I need to substitute all tuples with indices in this list called " indices " ( and li=length ( indices )) 
+I've also tried installing 1.3.0 through pip as well as source . 
+Any help would be much appreciated . 
+Maybe you need to rescale with 1 / 30000 to be at the right place on your graph . 
+Changing this would require low-level tweaking . 
+I've also refined your approach to allow zooming in over a section of the data and to produce better results at the borders . 
+Any help would be appreciated . 
+Can someone help me sort out the issue resulting to such an error . 
+Is there any way , I can save a magnified version for proper visualisation later ? 
+So let's say I only need ` 4402 x 4410 ` but I don't know the index . 
+I had to upgrade to most recent MPL to find the subplots method of pylab . 
+averaging elements in a matrix with the corresponding elements in another matrix ( in python ) 
+We consider now that ` -- pylab ` was a mistake , but that it was still really usefull at the beginning of IPython . 
+Is there a way to increase the thickness and size of ticks in matplotlib without having to write a long piece of code like this : #CODE 
+Or you could define column ' date_obj ' as the index of your data : #CODE 
+Am I missing something , or have you left out all the plot commands ? 
+This is my first attempt at python , however , and am still finding out how it works , so please put me right if this idea is fundamentally flawed ! 
+Finally , here's a sample portion of an old ( bad ) data file : #CODE 
+If you you have any questions , please leave a comment . 
+Where exactly is the problem ? 
+The last dutch sentence does mean something like : The system can't find the specified file . 
+This is nice of them , as not all Windows users have C++ compilers available . 
+The root of the problem is that matplotlib tries to put all bins on the plot . 
+This question has probably a totally simple solution but I just can't find it . 
+Any suggestions would be awesome . 
+In non-interactive mode , display all figures and block until the 
+This is all very new to me . 
+1 ) Let's assume I take 1 sample ` x = [ 1 , 2 ]` from the dataset 
+I have a 4d or higher ellipsoid in matrix form ( which form is important ) . 
+I didn't look into the documentation , simply used the dot completion on the handle 
+Here is your example with those modifications and also with a single layout computed at the beginning that is reused in the loop . 
+I now understand that I need to generate all the triplets across the three tables ( to cover all the combinations ) . 
+i dont know how array concatenation works on numpy arrays 
+I can't seem to get my head around why it doesn't show the value 128 as grey with I have chosen the cmap to be gray-scale . 
+what do you mean with %s ? 
+If that isn't what you want , I would recommend doing something where you create a PNG image of what you do want , create a child QLabel , and move the child widget around in your mouseMoveEvent . 
+Any suggestion is welcome . 
+I was trying to add a custom widget into qtdesginer using following code #CODE 
+source : #URL 
+As has been pointed out above , this will get more complicated if the both the y graphs were defined at different x points . 
+@USER Simoes , what happens is you have Nan's in various places in your array ? 
+An example script with generated data rather than the real data is : #CODE 
+Also , it's harder to reproduce across multiple machines ( even if that just means " my current machine , and the new laptop I'll have 18 months from now when I've forgotten how to solve it ") . 
+The words ' non-default ' and ' normal ' are mine - I'm not sure what they mean yet . 
+( think of it as a unit square ) 
+This code uses a Counter to count the number of instances that an object occurs in an array ( in this case counting the number of times an integer is in your list ) . 
+In the image above I'm trying to extract iso-value 25 from the scalar field of f ( x , y )= x^3+y^3 . 
+Is there any other way I can plot my result continuously ? 
+at lag 0 , the ACF is 0.5 . 
+The example talks about a fit to power law , but clearly a straight line could be done as well . 
+As I see it , I could resolve and make it work if I could adjust the line spacing / height to be less than what the font requests . 
+tells the writer to temporarily save the frames to disc before composing the movie , which side-steps the problem . 
+Select starting color in matplotlib colormap 
+I know this question is a couple years old , but since there is no accepted answer , I'll add what works for me . 
+include the piece of the code where you make call to ` mpl_connect ` 
+Is there any ready to use function based on python's matplolib ? 
+-2 is high of indices range and then low of indices range 
+Any insight you could provide that would help get me started the proper way would be fantastic . 
+( I can open a new question if that's perferable ) 
+For example , here's a simple bit of code that sets up a list of colors based on whether the data is positive or negative : #CODE 
+With that example data I was getting " shape mismatch " errors . 
+Then , I'd use POV-Ray or Blender to model the planes at whatever angles , spheres for the round things ( planets ? ) . 
+So , thus far , all I produce is : 
+I'm hoping I can find a funciton ( or build one ) that does new_ids_arr = new_ids * new_ids^Transpose ... or similar 
+Any help much appreciated . 
+But there are still white edges around ( I have added a screenshot to my original question ) 
+How could I use ` matplotlib ` to represent such a matrix as a grid of red and black squares ? 
+The thick grey line in the middle of the violin is the bootstrapped 99% confidence interval of the mean , which is the white horizontal line , both from pointplot . 
+@USER I up voted you but add ` import numpy as np ` 
+So , when you reduce to 2 dimensions , the power is the sum of the first 2 eigen values . 
+Indexing starts with ` 0 ` in Python ( and most any other programming language I know ) . 
+I have a matrix file of Hurricane data and it plots with the command : #CODE 
+If they enter 30 , they will look at a 30-minute time window , if they type 5 , matplotlib picks this up , data gets trimmed , and only 5 minutes worth of data gets shown . 
+In the meanwhile does any one has a better suggestion ? 
+I want it at y= 10.5 , specifically . 
+I then plot each of these values , but to get a more sensible result , I need to take the mean of all of these files for each cell , and plot that with the standard deviation obtained as error bars . 
+I'm using data of the form : ` [ num1 , num2 ,..., numk ]` ( an array of integers ) . 
+For the time steps where convergence is reached Id like to have the x-axis green and for non-convergence starting from light red for not so bad to red for bad . 
+For instance you can add #CODE 
+I don't want to get a newer one just incase any of the practice problems / lecture problems are incompatible with a newer version of IDLE . 
+All of these frames are loaded at the start of the application . 
+if you suspect one specific builtin , try checking it's type ( ` type ( dict )`) , or look at the properties / functions it has ( ` dir ( dict )`) . 
+In some work I have done we used a simple approximation of the derivative , when this changes sign you have a peak ( in 1D data ) , one can then add some parameters to remove peaks due to noise . 
+Here's a working code sample that shows you how to get it working . 
+How can I change this behavior and use Arial fonts for all of my plots ? 
+How to divide ytics to a certain number in matplotlib ? 
+Matplotlib cannot find facefile , is using old Python interpreter location 
+do you get any message when trying plotting it ? 
+I have mac os x 10.5.8 and was wondering if anyone could recommend where I could find the proper package . 
+Well , this isn't a wxPython answer but I've used Chaco for this sort of thing and it's pretty straight forward . 
+The point IS at its position namely ( 1 , 1 , 1 ) . 
+All is fine again . 
+The next plot to show has the same clusters and colors but a different location . 
+@USER The first approach would help only if the internal representation was the problem , but it doesn't solve the underlying size issue . 
+After hours analyzing the source code of basemap's ` tissot ` function , learning some properties of ellipses and lot's of debugging , I came with a solution to my problem . 
+You'd need to refactor the code to break your worker method up into smaller pieces that multiple processes can work on at the same time , and then pull it back together once all the pieces are ready . 
+are you just trying to open a separate window or display that window inside of your main window ? 
+The one catch : if you embed a PDF inside a textbox , Word will rasterize this when you save it to a PDF . 
+How can I address a specific line ( by name , by number , by reference ) throughout the program and delete that line ? 
+And also I need to do that for all variables simultaneously . 
+` newtitle = " %s\n$%s$ " % ( ' text\ below\ the\ main\ title ' , newtitle )` 
+Have you had a look at the ` webagg ` matplotlib backend ? 
+find the file from the link 
+If you want separate figures , as the title of your question suggests the ` subplots=True ` argument might get the job done . 
+I suggest removing all the domain specific stuff . 
+Just change ` shape ` to ` ( 10 , 10 , 10 , 10 , 10 )` and see . 
+Any help would be appreciated . 
+However , ( at least what I have seen is that ) sometimes after the plot has been displayed , it goes into a " Not Responding " mode and you just have to kill the process anyways . 
+It consists in a floating-point parameter P , with dimension NxM , and each pixel is geolocated by the fields latitude and longitude ( each of size NxM ) . 
+In order to change the order of the bars , you should change the order in the index . 
+This does not work when I replace the random plot data with an actual color PNG image . 
+For example , say you had data between 0 and 1 but didn't like the colors used at the extremes of the colormap for 0 and 1 . 
+After searching through multiple posts , I basically want to use a generic colormap ( rainbow ) and multiply my third array by the colormap in order to display different colors for each of the xy points . 
+Hi , Thanks Tobold , I will check the source code you mention . 
+This next block is what does what you want with the ` for ` loop . 
+Say that I have 6 variables that I want to sort into these 3 groups and plot like a venn diagram . 
+ValueError : setting an array element with a sequence . 
+My need is that I want to plot these nominal values of both actual and predicted ones on the same plot so that It will be easy to compare how good was the prediction as compared to actual values . 
+So , open up your favorite Terminal emulator and enter #CODE 
+Also , the lists need to be equal length . 
+Because matplotlib will convert things to numpy arrays regardless , there are more efficient ways to do it . 
+And here is where I grab the data and I try to update the limits of the plot #CODE 
+Any help is appreciated . 
+Which is the why , conveniently , ` colors ` keyword exists . 
+How can I find the code to support multiple plotting scales and X-axis on seperate panels using sizer routines ? 
+I'm trying to build Matplotlib from source with Tkinter . 
+This means that you can install matplotlib locally in your ` virtualenv ` and it will find all of its backend dependencies in the system-wide ` site-packages ` . 
+I am trying to create a simple GUI using tkinter which will just open a window displaying the plot . 
+Web convinces me using this is no good idea after all : For example #URL " Avoid 3-D charts at all costs . 
+Using pure Python , you can extract columns ` 1 ` , ` 5 ` and ` 7 ` by using the following nested list comprehension : #CODE 
+Is there any way of getting some input from a user in matplotlib ? 
+` theta ` is in radians instead of degrees . 
+' plot ' shows me a line interconnecting all data points , but not the data points themselves ( unless there's a way I don't know of ) . 
+I could divide the ` peak_top ` by 2 to find the half height and then try and find y-values corresponding to the half height , but then I would run into trouble if there are no x-values exactly matching the half height . 
+why can't it find the file ? 
+However , the resulting image always has the same resolution , around ( 250x250 ) . 
+Installing those packages from the source can be a pain , especially on Windows and OS X . 
+Sort arrays by two criteria 
+However , I am kinda confused , any help would be appreciated . 
+Unfortunately if you search this array for all subnodes given some index you only get some of the subnodes contained by the original triangle because most nodes belong to several triangles and they are only added to one of these . 
+If I set shrink 1.0 and fraction to anything , it shrinks the graph , not affecting the colorbar size at all , until changing fraction causes it to be exactly what I already have , at which point changing them stops doing anything . 
+It doesn't add anything else . 
+Now I just wish they'd add some kind of drop down menu to matplotlib ... 
+Thanks for any help 
+The source data's list is called xyz . 
+I have been looking around and maybe it could be a version-of-Pyhton problem . 
+( I want to reduce the size of the outlier ) #CODE 
+This should work for any number of columns and length of data . 
+Any assistance would be greatly appreciated , this has been doing my head in . 
+where axes_square is simply : #CODE 
+I can put together a more detailed answer based on that package if desired . 
+It's fairly easy to speed it up by making an approximation -- just take the 2D histogram and blur it with a guassian filter of the right radius and covariance . 
+I've tried the solutions posted by Marek and qarma attempting to obtain the coordinates of the bins rather than the index of them , like so : #CODE 
+What do you mean by make sure the ' backend setting for pylab is not set to inline ? 
+sets the initial x , v of every particle in an array 
+Post more information on structure of your array . 
+Here is a sample code if anyone wants to play with it . 
+Are all these settings really necessary to achieve the result I'm looking for , or is there perhaps a more compact way to accomplish my goal : #CODE 
+I want to select ( in the SQL sense ) just columns ` b0 ` through ` b9 ` from the array , giving the structure #CODE 
+I can't find any method to tell mpl to plot all of the data , it seems that there are only methods for drawing every n'th element or similar ( and passing 1 does not help ) . 
