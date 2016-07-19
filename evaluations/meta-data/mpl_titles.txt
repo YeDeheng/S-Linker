@@ -7,7 +7,7 @@ Updating the positions and colors of pyplot.scatter
 Matplotlib stops animating after first frame
 Matplotlib : How to put individual tags for a scatter plot
 TeX in matplotlib on Mac OS X and TeX Live
-Can't ( .exe ) my 300 line program using Cx_freeze or PyInstaller .
+Can't ( .exe ) my 300 line program using Cx_freeze or PyInstaller . ( Matplotlib / Scipy )
 python 2.7 : cannot pip on windows " bash : pip : command not found "
 python 2.7 : cannot pip on windows " bash : pip : command not found "
 how to reverse color map image to scalar values
@@ -59,11 +59,11 @@ How to maximize a plt.show() window using Python
 How to use AxesGrid for varying size axes
 Matplotlib event and replotting
 link axis between different plot ( no subplots ) using matplotlib
-PyPlot : Trying to generate shared legend in a subplot , but legends don't appear properly when embedded in a loop .
+PyPlot : Trying to generate shared legend in a subplot , but legends don't appear properly when embedded in a loop . ( PDF backend )
 Fitting data smoothly in Matlab and Gnuplot
 Custom Artist In Matplotlib Legend
 Can I convert a contour plot in matplotlib to a format that can be imported and edited in AutoCAD ?
-matplotlib colors rgb_to_hsv not working right .
+matplotlib colors rgb_to_hsv not working right . Maybe need to report it ?
 Adding vertical line to Date formatted time-series in matplotlib
 Adding vertical line to Date formatted time-series in matplotlib
 Matplotlib Plot Lines Above Each Bar
@@ -231,7 +231,7 @@ Matplotlib python show() returns immediately
 matplotlib linked x axes with autoscaled y axes on zoom
 Merge two matplotlib figure.Figure or axes.Axes objects into a new one
 Merge two matplotlib figure.Figure or axes.Axes objects into a new one
-Matplotlib window class ?
+Matplotlib window class ? OO equivalent of matplotlib.pyplot.close() ?
 matplotlib axis redraw on zoom
 Bar charts with xaxis bins using Plotly or Matplotlib ?
 matplotlib circle , animation , how to remove old circle in animation
@@ -282,7 +282,7 @@ Adding arrows to rising edges of pulse plots in matplotlib
 Possible to make labels appear when hovering over a point in matplotlib ?
 Add footnote under the x-axis using matplotlib
 connection of Pyside QPushButton and matplotlib
-Python-Matplotlib boxplot .
+Python-Matplotlib boxplot . How to show percentiles 0 , 10 , 25 , 50 , 75 , 90 and 100 ?
 Finding the outlier points from matplotlib : boxplot
 Finding the outlier points from matplotlib : boxplot
 python plot simple histogram given binned data
@@ -290,7 +290,7 @@ horizontal plot in python
 How do you plot relative frequency in python
 How do you plot relative frequency in python
 Preventing xticks from overlapping yticks
-Find intersection of A ( x ) and B ( y ) in complex plane plus corr .
+Find intersection of A ( x ) and B ( y ) in complex plane plus corr . x and y
 Updating a pyplot 3d scatter plot in a loop , grid lines overlap points
 Scatter plots in Pandas / Pyplot : How to plot by category
 Include histograms in matplotlib scatterplot
@@ -302,7 +302,7 @@ matplotlib set legend title position ignored when saving figure
 Values of image pixels according to the colorbar
 python : ImportError : No module named patheffects
 python : ImportError : No module named patheffects
-What is the difference between ` np.histogram ` and ` plt.hist ` ?
+What is the difference between ` np.histogram ` and ` plt.hist ` ? Why don't these commands plot the same graphics ?
 Matplotlib : Getting different colors in data lines with error bars
 Define aspect ratio when using twinx
 Plotting a categorical variable over a rectangular mesh
