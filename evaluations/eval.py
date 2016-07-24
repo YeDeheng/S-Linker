@@ -70,6 +70,7 @@ def gettitle():
 	return title
 
 # input a title, get the question ID
+# usage: python eval.py titles.txt 
 def getid():
 	# connect to DB
 	#db = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="stackoverflow20160301")
@@ -86,10 +87,11 @@ def getid():
 		for line in f:
 			thread_txt.append(line.strip())
 
-	with open('mpl_titles.txt', 'r') as f: 
+	with open(sys.argv[1], 'r') as f: 
 		for line in f:
 			line = line.strip()
 			if line not in thread_tk:
+				print line
 				raise Exception('title_tk not in thread_tk pool!')
 			else:
 				title_txt.append( thread_txt[thread_tk.index(line)] )
@@ -136,5 +138,6 @@ def getid():
 #def title_mapping():
 
 if __name__ == "__main__":
-	#gettitle()
 	getid()
+	#gettitle()
+	#conlltotext()

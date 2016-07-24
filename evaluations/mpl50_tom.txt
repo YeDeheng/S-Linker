@@ -1,0 +1,38 @@
+gcf() means Get Current Figure 
+However , the sample consists of distinct solutions which form lines in the parameter space such that putting everything into a matrix and using ` imshow ` is not desirable because of the pixelation artefacts ( Figure 1 ) . 
+While it might be possible to hack ` JointGrid ` to get this to work , I suspect it will very likely be easier to just use ` kdeplot ` on one Axes , using ` twinx ` and ` twiny to place and scale the marginal plots properly . 
+I'm using imshow() to draw a 2D numpy array , so for example : #CODE 
+For me the simplest way is plotting directly the masks with imshow , passing different colormaps . 
+I'm doing a hist plot and I want some numbers shown in the plot , so I put in a text box using mathtext for the text , but I doesn't work and I can't see why . 
+You can use the ` set_position() ` method of the ` Spine ` class : #CODE 
+What you should do is save a reference to the first ` Text ` object and update its contents by calling its ` set_text() ` method . 
+There is a references to the Text object returned by the original setting of suptitle in figure.texts . 
+I think you need to displace the ` Text ` object , using the ` set_position (( x , y ))` method . 
+Use Axis method ` set_xscale ` or ` set_yscale ` . 
+This is not particularly well documented , but ` Polygon ` objects have a pair of methods ` get_xy ` and ` set_xy ` . 
+Currently I use the ` add_patch ( Rectangle ( ... ))` , but it does not fit really well . 
+Here , what you have done is capture the ` Axes ` instance that is returned from ` add_subplot() ` . 
+The ` transform ` in this case is a ` BboxTransformTo ` object , which : 
+But when I checked the source code of draw_networkx_nodes draw_networkx , I realized that it is not a straight forward task as the draw function stores the positions ( nodes and edges ) in a numpy array , send it to the ax.scatter function of matplotlib ( sourcecode ) which is a bit hard to manipulate without messing something up . 
+This simply calls the draw method of the figure periodically . 
+Then I just added a signal to the custom version and overrode the draw method . 
+I'm also panning and zooming into this figure , and have been using the draw method to show the new perspectives from zooming in ( using set_xlim and set_ylim ) and from panning ( drag_pan and start_pan ) . 
+I would use ` ax.autoscale ( enable=False )` before your call to ` scatter ` . 
+You can perhaps loop into your ` AxesSubplot ` objects and call ` autoscale ` passing the ` axis ` parameter : #CODE 
+The trick is at the end , in the custom refresh method ! 
+For what you're wanting to do , you'd be far better off using annotate . 
+It's quite simple to do manually with ` annotate ` . 
+You can use the annotate command to place text annotations at any x and y values you want . 
+@USER I'm not sure why we have to explicitly call ` draw ` . 
+The ` boxplot ` function only plots quartiles ( 0 , 25 , 50 , 75 , 100 ) . 
+You should use the ` hist ` function . 
+An similar example of such plot is " hist ( x , orientation= ' horizontal ')" . 
+I need to use the ` hist ` function , I have looked elsewhere on this site but I haven't found anything . 
+How can I prevent the labels of ` xticks ` from overlapping with the labels of ` yticks ` when using ` hist ` ( or other plotting commands ) in matplotlib ? 
+An easy way to do this is to add ` 0j ` to the argument of the ` sqrt ` , like this , ` sqrt ( 1+0j- ( 1 / x ) **2 )` . 
+You need to set the new coordinates of the datapoints in the internal ` _ofsets3d ` variable of the ` Line3DCollection ` object returned by the ` scatter ` function . 
+I think changing the arrowstyle will help here . 
+I've confirmed that this works for ` plot() ` as well as ` imshow() ` . 
+However , the savefig() output is too zoomed out , too general . 
+The helper functions date2num() , num2date() and drange() are used to facilitate easy conversion to and from datetime and numeric ranges . 
+Documentation of legacy ` subplot() ` is [ here ] ( #URL ) and ` subplots() ` is [ here ] ( #URL ) . 

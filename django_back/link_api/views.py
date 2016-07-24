@@ -26,6 +26,7 @@ import texttoconll
 import twokenize
 import urllib
 import urlparse
+import Levenshtein
 
 token_list = {}
 
@@ -93,6 +94,11 @@ def extract_entity(request):
 	data = json.loads(body_unicode)
 	full_text = data['fullText'].encode('ascii', errors='xmlcharrefreplace')
 	mode = int(data['mode'])
+
+	# added by deheng
+	# full_text = re.sub(r'<code>', '`', full_text)
+	# full_text = re.sub(r'</code>', '`', full_text)
+	
 	with open(os.path.join(settings.STATIC_ROOT, 'demo.txt'), 'w') as demo_file:
 		demo_file.write(full_text)
 
@@ -238,9 +244,9 @@ def link_entity(request):
 				if maxScoreResult['type'] == 'class':
 					class_list.append((maxScoreResult['name'], data_entity_index[int(key)]))
 	class_list = class_list + class_parsed_list
-	# print class_list
+	print class_list
 	qualified_entity_list = set(qualified_entity_list)
-	# print qualified_entity_list
+	# print class_list
 
 	for key in data_entity:
 		curr_key = key
@@ -325,8 +331,8 @@ def link_entity(request):
 					result['distance'] = -1
 					temp = []
 					for valid_class in class_list:
-						# if Levenshtein.ratio(valid_class, record.api_class) > 0.9:
-						if valid_class[0] in record.api_class:
+						if Levenshtein.ratio(valid_class[0], record.api_class) > 0.8:
+						# if valid_class[0] in record.api_class:
 							mark[4] = True
 							temp.append(abs(data_entity_index[int(curr_key)] - valid_class[1]))
 

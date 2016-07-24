@@ -1,0 +1,38 @@
+9215658
+11492581
+29013548
+32766062
+13384221
+13987942
+24302850
+7153969
+10559144
+15637961
+19717645
+23430786
+32008243
+28574087
+29809238
+33127052
+3472088
+10015213
+18260134
+19916295
+24223378
+1181391
+6251569
+6260211
+6282058
+9488072
+8681199
+12303501
+12311262
+13110826
+13481766
+31102754
+21615554: NER failed. You need to set the new coordinates of the datapoints
+27051462: linking error: duplicate candidates
+7080921: in comment, I've confirmed that this works for plot() as well as imshow().
+17455959: NER failed. However, the savefig() output is too zoomed out
+13421947: The helper functions date2num(), num2date() and drange(). Failed. 
+3584805: in comment, didn't pass
