@@ -9,7 +9,7 @@ import subprocess
 
 class DataReader:
     def __init__(self):
-        self.db = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="stackoverflow20160301")
+        self.db = MySQLdb.connect(host="155.69.151.146", user="root", passwd="123456", db="stackoverflow20160301")
         self.cur = self.db.cursor()
     
     def readById(self, id):
@@ -70,7 +70,7 @@ def ner(id):
 if __name__ == '__main__':
 	id = 9215658
 
-	dr = DataReader()
-	dr.readById(id)
+	#dr = DataReader()
+	#dr.readById(id)
 
 	ner(id)
