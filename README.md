@@ -5,7 +5,7 @@
 
 ## Setup guide
 ### Pre-requisites:
-1.  Installed Python 2.7 (with pip)
+1.  Installed Python 2.7 (with pip), nltk, scikit-learn, gensim, html2text, beautifulsoup.
 2.  Installed latest version of [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](http://dev.mysql.com/downloads/workbench/)
 3.  MySQL service is started
 4.  Installed [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) Chrome extension 
